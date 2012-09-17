@@ -172,7 +172,9 @@ This module adds a code editor that shows up in individual slides
     if($container.hasClass('coderEditor')) {
       if(config.isInstant) {
         $destination.show();
-        runCode($element,$element.attr('data-coder-template'));
+        setTimeout(function() {
+          runCode($element,$element.attr('data-coder-template'));
+        },10);
       }
       return;
     }
