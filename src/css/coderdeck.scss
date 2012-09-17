@@ -59,8 +59,8 @@ $gray-color:#CCC;
 	
 	.slide-list {
 		text-align:left;
-		h1 { margin-top:.35em; text-align:left; @include no-transform; margin-bottom:.3em;}
-		h2 { margin-left:.75em; margin-top:.5em; text-align:left; margin-bottom:.3em; }
+		h1 { margin:0; padding-top:.35em; text-align:left; @include no-transform; padding-bottom:.3em;}
+		h2 { margin:0; padding-left:.75em; padding-top:.5em; text-align:left; padding-bottom:.3em; }
 		h3 { margin-left:2em; text-align:left; color:$main-color; margin-bottom:.3em;}
 		h4 { margin-left:1em; text-align:left;  margin-top:1em;}
 		ol,ul { margin-bottom:.3em; padding-left:1.1em;  list-style-type: square; color:$callout-color; }

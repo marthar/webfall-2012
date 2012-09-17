@@ -16,7 +16,8 @@
   .deck-container .slide-list {
     text-align: left; }
     .deck-container .slide-list h1 {
-      margin-top: .35em;
+      margin: 0;
+      padding-top: .35em;
       text-align: left;
       transform: none;
       -webkit-transform: none;
@@ -24,12 +25,13 @@
       -ms-transform: none;
       -o-tranform: none;
       position: static;
-      margin-bottom: .3em; }
+      padding-bottom: .3em; }
     .deck-container .slide-list h2 {
-      margin-left: .75em;
-      margin-top: .5em;
+      margin: 0;
+      padding-left: .75em;
+      padding-top: .5em;
       text-align: left;
-      margin-bottom: .3em; }
+      padding-bottom: .3em; }
     .deck-container .slide-list h3 {
       margin-left: 2em;
       text-align: left;
