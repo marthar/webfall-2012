@@ -58,6 +58,7 @@ $gray-color:#CCC;
 	}
 	
 	.slide-list {
+		text-align:left;
 		h1 { margin-top:.35em; text-align:left; @include no-transform; margin-bottom:.3em;}
 		h2 { margin-left:.75em; margin-top:.5em; text-align:left; margin-bottom:.3em; }
 		h3 { margin-left:2em; text-align:left; color:$main-color; margin-bottom:.3em;}
@@ -66,7 +67,7 @@ $gray-color:#CCC;
 		li { padding-left:.5em; text-align:left;
 			h3 {margin-left:0;}
 		}
-		p { margin-top:-.75em; margin-left:2em; text-align:left; color:$main-color; line-height:1.3em;}
+		p { margin-top:-.75em; margin-left:2em; text-align:left; line-height:1.3em;}
 		
 	}
 	
@@ -132,6 +133,8 @@ $gray-color:#CCC;
 	}
 
 	.large { color:red;}
+	.callout {color:$callout-color;}
+	em { color:$callout-color; font-style:normal;}
 	
 	
 	h1 {
@@ -140,7 +143,8 @@ $gray-color:#CCC;
 		line-height: 1em;
 		text-transform:uppercase;	
 		color:$callout-color;
-		font-size:4em;		
+		font-size:4em;	
+		letter-spacing:-.02em; word-spacing:.1em;	
 	}
 
 
@@ -176,6 +180,28 @@ $gray-color:#CCC;
 		text-align:left;
 		padding:30px 50px;
 	}
+
+	.example { 
+		//display:inline-block;
+		font-size:2.5em;
+		color:$main-color;  
+		line-height:2em; 
+		padding:.1em .15em 0 .15em; 
+		margin-left:1em;
+		margin-bottom:.5em;
+		
+		em { 
+			display:inline-block;
+			background:$callout-color; 
+			color:#fff; 
+			padding:.1em .15em 0 .15em; 
+			font-style:normal;
+			//margin-left:1em;
+			margin:.5em 0;
+		}
+	}
+
+
 
 	code {
 		color:#888;
