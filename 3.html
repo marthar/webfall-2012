@@ -77,13 +77,19 @@
 			<h3>Discuss Readings</h3>
 		</li>
 		<li class="slide">
-			<h3>HTML Structure Review</h3>
+			<h3>Lists</h3>
 		</li>
 		<li class="slide">
-			<h3>Lists, Anchors, Links, Images, &amp; Characters</h3>
+			<h3>Anchors</h3>
 		</li>
 		<li class="slide">
-			<h3>Exercises</h3>
+			<h3>Links</h3>
+		</li>
+		<li class="slide">
+			<h3>Images</h3>
+		</li>
+		<li class="slide">
+			<h3>Characters</h3>
 		</li>
 	</ol>
 </article>
@@ -93,518 +99,161 @@
 <h1>Homework</h1>
 </article>
 
+<article class="slide slide-list">
+	<h2>Homework Review</h2>
+	<script>
+(function($){
+ 
+    $.fn.shuffle = function() {
+ 
+        var allElems = this.get(),
+            getRandom = function(max) {
+                return Math.floor(Math.random() * max);
+            },
+            shuffled = $.map(allElems, function(){
+                var random = getRandom(allElems.length),
+                    randEl = $(allElems[random]).clone(true)[0];
+                allElems.splice(random, 1);
+                return randEl;
+           });
+ 
+        this.each(function(i){
+            $(this).replaceWith($(shuffled[i]));
+        });
+ 
+        return $(shuffled);
+ 
+    };
+ 
+})(jQuery);
+
+function shuffleHomework(amt) {
+	if(amt <= 0) return;
+	$("#homework li").shuffle();
+	setTimeout(function() { shuffleHomework(amt - 1); },200);
+}
+
+	</script>
+	<a href='javascript:shuffleHomework(10);'>Shuffle</a>
+	<ul id='homework'>
+		<li><a href='http://heathermendonca.github.com/homework/index.html'>heathermendonca</a></li>
+		<li><a href='http://jmfisherr.github.com/homework/index.html'>jmfisherr</a></li>
+		<li><a href='http://yeesusanna.github.com/homework/index.html'>yeesusanna</a></li>
+		<li><a href='http://krhogan.github.com/homework/index.html'>krhogan</a></li>
+		<li><a href='http://nopsketchbook.github.com/homework/index.html'>nopsketchbook</a></li>
+		<li><a href='http://lkfenton.github.com/homework/index.html'>lkfenton</a></li>
+		<li><a href='http://bejohnston.github.com/homework/index.html'>bejohnston</a></li>
+		<li><a href='http://annacolleenc.github.com/homework/index.html'>annacolleenc</a></li>
+		<li><a href='http://hisakanishibayashi.github.com/homework/index.html'>hisakanishibayashi</a></li>
+		<li><a href='http://marthabarry.github.com/homework/index.html'>marthabarry</a></li>
+		<li><a href='http://trwhite.github.com/homework/index.html'>trwhite</a></li>
+		<li><a href='http://themusicmaker.github.com/homework/index.html'>themusicmaker</a></li>
+		<li><a href='http://ktengprawat.github.com/homework/index.html'>ktengprawat</a></li>
+		<li><a href='http://digihex.github.com/homework/index.html'>digihex</a></li>
+	</ul>
+</article>
 
 
 <article class='slide slide-list'>
 <h2>Readings</h2>
 	<ul>
+		<li><h3>Duckett, Chapters 1-5 &amp; 17</h3></li>
 		<li>
-			<h3><a href='http://www.alistapart.com/articles/dao/'>A Dao of Web Design</a></h3>
+			<h3><a href='https://developer.mozilla.org/en/Sections_and_Outlines_of_an_HTML5_document'>Sections and outlines of an HTML5 document</a></h3>
 		</li>
 		<li>
-			<h3><a href='http://www.alistapart.com/articles/understandingwebdesign/'>Understanding Web Design</a>
+			<h3><a href='http://www.alistapart.com/articles/get-started-with-git/'>Get Started with Git</a>
 			</h3>
 		</li>
 	</ul>		
 </article>
 
 <article class='slide slide-accent'>
-	<h1>Let's Talk HTML</h1>
+	<h1>Let's Talk more HTML</h1>
 </article>
 
-<article class='slide slide-subhead'>
-	<h1>HTML</h1>
-	<h2>Hypertext Markup Language</h2>
-	<p>HTML is a markup language, which means you're annotating (marking up) plain text to give it structure and meaning, similar to the way you would underline or make notes in a book.</p>
-</article>
-
-<article class='slide slide-list'>
-<h1>HTML "1.0"</h1>
-<ul>
-	<li class="slide">
-		<h3>Original draft from 1992</h3>
-	</li>
-	<li class="slide">
-		<h3>20 Tags, including: section, h1-h6, p, a, menu, ul, ol, dir, li, dl dt, dd</h3>
-	</li>
-	<li class="slide">
-		<h3>How stuff was displayed was left up to the browser</h3>
-	</li>
-	<li class="slide">
-		<h3>Was more concerned with “Semantic” markup of documents</h3>
-	</li>
-</ul>
-</article>
-
-<article class='slide slide-list'>
-<h1>The Browser War, Round 1</h1>
-<ul>
-	<li class="slide">
-		<h3>Mozilla vs. Microsoft.
-		</h3>
-	</li>
-	<li class="slide">
-		<h3>Started adding features fast and furious</h3>
-	</li>
-	<li class="slide">
-		<h3>Lots of incompatabilities</h3>
-			</li>
-	<li class="slide">		
-		<h3><img src="images/browsers.jpg" alt="browser logos" class='top-image'/></h3>
-	</li>
-</ul>
-</article>
-
-<article class='slide slide-list'>
-<h1>XHTML</h1>
-<ul>
-	<li class="slide">
-		<h3>Reaction to “looseness” of HTML</h3>
-	</li>
-	<li class="slide">
-		<h3>A XHTML page is a valid XML document</h3>
-	</li>
-	<li class="slide">
-		<h3>In XHTML 4.0 Strict, document won’t render if there’s a mistake in the HTML</h3>
-	</li>
-	<li class="slide">
-		<h3>Boring...Coming down from the W3C</h3>
-	</li>
-</ul>
-</article>
-
-<article class='slide slide-list'>
-<h1>HTML5 and The New Hope</h1>
-<ul>
-	<li class="slide">
-		<h3>Previous versions of HTML came from the IETF (Now Defunct) and W3C</h3>
-	</li>
-	<li class="slide">
-		<h3>2004: There was a rebellion over XHTML (non-backwards compatible version of HTML)</h3>
-	</li>
-	<li class="slide">
-		<h3><a href="http://www.whatwg.org/">WHATWG</a> Formed (Apple, Mozilla, Opera)</h3>
-	</li>
-	<li class="slide">
-		<h3>2007: Adopts HTML5, drops XHTML</h3>
-	</li>
-</ul>
-</article>
-
-<article class='slide slide-image'>
-		<img src="images/html5-shield-1.jpg" class='top-image'/>
-	<h1>HTML5
-	</h1>
-	<p>Last numbered version of HTML<br/>
-	Browser makers driving features<br/>
-	Feature coming fast and furious</p>
-	<p class="slide"><span class="callout">We’re in Browser Wars, Round #2</span></p>
-</article>
-
-<article class='slide slide-list'>
-<h1>What's not possible with just "HTML5"?</h1>
-<ol>
-	<li class="slide">
-		<h3>Real-time 3D Gaming</h3>
-	</li>
-	<li class="slide">
-		<h3>Geolocative Apps</h3>
-	</li>
-	<li class="slide">
-		<h3>Desktop Apps</h3>
-	</li>
-	<li class="slide">
-		<h3>Mobile Apps</h3>
-	</li>
-	<li class="slide">
-		<h3>Motion control</h3>
-	</li>
-</ol>
-</article>
-
-<article class='slide slide-subhead'>
-<h1>Sort of a trick question!</h1>
-<p>(For Desktop and Mobile Apps, you need a wrapper, but otherwise can use straight HTML5)</p>
-</article>
-
-<article class='slide slide-list'>
-<h1>New in "HTML5"</h1>
-<ol>
-	<li class="slide">
-		<h3>New Semantic Tags</h3>
-	</li>
-	<li class="slide">
-		<h3>Hardware Accelerated 2D + 3D Graphics</h3>
-	</li>
-	<li class="slide">
-		<h3>CSS3 - visual goodies, transitions</h3>
-	</li>
-	<li class="slide">
-		<h3>Audio, Video</h3>
-	</li>
-	<li class="slide">
-		<h3>WebSockets</h3>
-	</li>
-	<li class="slide">
-		<h3>Local Storage</h3>
-	</li>
-	<li class="slide">
-		<h3>Offline Storage</h3>
-	</li>
-	<li class="slide">
-		<h3>SVG</h3>
-	</li>
-	<li class="slide">
-		<h3>New Events (touch, orientation, accel)</h3>
-	</li>
-	<li class="slide">
-		<h3>Geolocation (via GPS)</h3>
-	</li>
-</ol>
-</article>
 
 <article class='slide slide-accent'>
-	<h1>HTML 101</h1>
-</article>
 
-<article class='slide slide-accent'>
-	<h1>first a little intro</h1>
 </article>	
 
 <article class='slide slide-subhead'>
-	<h1>Let's Watch a Video</h1>
-	<h3><a href="http://www.dontfeartheinternet.com/the-basics/not-tubes">Don't Fear the Internet</a></h3>
-	<p>by the amazing Jessica Hische &amp; Russ Maschmeyer</p>
+	<h1>...but first a little review</h1>
+	<h3>Let's let Jessica & Russ get us started!</h3>
+	<h3><a href="http://www.dontfeartheinternet.com/html/don%E2%80%99t-fear-starting-from-scratch">Don't Fear the Internet</a></h3>
+</article>
+
+<article class='slide slide-accent'>
+	<h1>Lists</h1>
+</article>
+
+
+<article class='slide slide-accent'>
+	<h1>Anchors</h1>
+</article>
+
+
+
+<article class='slide slide-accent'>
+	<h1>Links</h1>
+</article>
+
+<article class='slide slide-accent'>
+	<h1>Images</h1>
 </article>
 
 
 <article class='slide slide-list'>
-	<h1>Tags</h1>
-	<div class="slide">HTML tags are element names surrounded by angle brackets like: <br/>
-		<div class="slide example"><em>&lt;</em> html <em>&gt;</em></div>
-	</div>
-</article>	
-
-<article class='slide slide-list'>
-	<h1>Tags</h1>
-	<div class="slide">HTML tags usually come in pairs<br/>
-		<div class="slide example"><em> &lt;head&gt;</em> &nbsp; <em class='slide'> &lt;/head&gt;</em></div>
-		In the industry we refer to these as <em>start tag and end tag</em> or <em>open tag and close tag</em>
-	</div>
-</article>
-
-<article class='slide slide-list'>
-	<h1>Tags</h1>
-	<div> In HTML you can write just the opening tag and it will often work like: <br/>
+	<h1>Linking to pages or images</h1>
+	<div>This is the trickiest part - where you <br/>
 			<div class="slide example"><em>&lt;h1&gt;</em> Headline<br/> <em>&lt;p&gt;</em> Body text.</div> 
 	</div>
 	<p class="callout">Don’t do this. Always use open and close or single tags.</p>
-</article>		
-
-<article class='slide slide-list'>
-	<h1>Tags</h1>
-	<p class='slide'>Tell the browser about your content</p>
-	<ul>
-		<li class='slide'>
-			<h3><em>&lt;html&gt;</em> describes the web page</h3>
-		</li>
-		<li class='slide'>	
-			<h3><em>&lt;body&gt;</em>  visible page content</h3>
-		</li>
-		<li class='slide'>	
-			<h3><em>&lt;div&gt;</em>  defines a division or a section</h3>
-		</li>
-		<li class='slide'>	
-			<h3><em>&lt;span&gt;</em>  group inline-elements together</h3>
-		</li>
-		<li class='slide'>
-			<h3><em>&lt;h1&gt;</em> heading</h3>
-		</li>
-		<li class='slide'>
-			<h3><em>&lt;p&gt;</em> paragraph</h3>
-		</li>
-		<li class='slide'>
-			<h3><em>&lt;em&gt;</em> adds emphasis</h3>
-		</li>
-		<li class='slide'>
-			<h3><em>&lt;header&gt;</em> is header content</h3>
-		</li>
-		<li class='slide'>
-			<h3><em>&lt;nav&gt;</em> is navigational content</h3>
-		</li>
-	</ul>		
-	<p class='slide'>Some tags are generic - <em>&lt;div&gt;</em>, <em>&lt;span&gt;</em> Some have “semantic” meaning <em>&lt;h1&gt;</em>, <em>&lt;nav&gt;</em><p>
-</article>		
-	
-<article class='slide slide-accent'>
-	<h1>Attributes</h1>
 </article>
 
-<article class='slide slide-list'>
-	<h1>Attributes</h1>
-	<h3 class='slide'>Tell the browser about your content</h3>
-	<ul>
-		<li class='slide'><h3> HTML tags/elements can have attributes
-			</h3>
-		</li>
-		<li class='slide'><h3> Attributes are always specified in the start tag
-			</h3>
-		</li>
-		<li class='slide'><h3> Attributes come in name/value pairs like: name="value"</h3>
-		</li>
-		<li class='slide'>	
-			<h3>&lt;<em>element </em><span class="callout">name = "</span><span class="light">value</span><span class="callout">"<span>&gt;		
-			</h3>
-		</li>
-	</ul>		
-</article>
-
-<article class='slide slide-list'>
-	<h1>Attributes</h1>
-	<span class="example">&lt;<em>element </em>&nbsp;<em>name</em>&nbsp; = "&nbsp;<em>value</em>&nbsp;"&gt;</span>
-	<p class="slide">Example:</p>
-	<ul>
-		<li class="slide"><h3>links are defined by using an <em>&lt;a&gt;</em> tag</h3>
-		</li>
-		<li class="slide"><h3>you tell the browser what address to link to by adding a <em>href</em> tag</h3>
-		</li>
-		<li class="slide"><h3>&lt;<em>a </em><span class="callout">href = "</span><span class="light">http://www.massart.edu</span><span class="callout">"<span>&gt;		
-		</h3>	
-		</li>
-	</ul>		
-</article>		
-	
-<article class='slide slide-list'>
-	<h1>Attributes</h1>
-	<p>Most Common Types</p>
-	<ul>
-		<li class="slide"><h3><span class="callout">CLASS</span> - this defines one or more CSS class names to assign to the tag.</h3>
-		</li>	 
-		<li class="slide"><h3><span class="callout">ID</span> - this defines a unique identifier that uniquely refers to this one tag.</h3> 
-		</li>	
-		<li class="slide"><h3><span class="callout">STYLE</span> - this defines the CSS styles to use for this particular element.<h3>
-		</li>	
-		<li class="slide"><h3>others: href, src, data-*</h3>
-		</li>
-	</ul>
-</article>			
-
-<article class='slide slide-list'>
-	<h1>Attributes</h1>
-	<p>More Examples</p>
-	<ul>
-		<li class="slide"><h3>&lt;<em>nav </em><span class="callout">id = "</span><span class="light">top-nav</span><span class="callout">"<span>&gt;		
-		</h3>	
-		</li>
-		<li class="slide"><h3>&lt;<em>img </em><span class="callout">src = "</span><span class="light">logo.png</span><span class="callout">"<span>&gt;		
-		</h3>	
-		</li>
-		<li class="slide"><h3>&lt;<em>p </em><span class="callout">class = "</span><span class="light">higlight</span><span class="callout">"<span>&gt;		
-		</h3>	
-		</li>
-		<li class="slide"><h3>&lt;<em>a </em><span class="callout">href = "</span><span class="light">http://www.massart.edu</span><span class="callout">"<span>&gt;		
-		</h3>	
-		</li>
-	</ul>
-</article>		
 
 <article class='slide slide-accent'>
-<h1>HTML5 Semantic Structure</h1>
+	<h1>Getting images into your site</h1>
 </article>
 
-<article class='slide slide-list'>
-	<h1>HTML5 Semantic Tags</h1>
-	<h3>Most Common Tags</h3>
-	<ul> 
-		<li class='slide'>
-			<h3 >&lt;head&gt; = Meta Info</h3>
-		</li>
-		<li class='slide'>
-			<h3 >&lt;body&gt; = Site Content</h3>
-		</li>
-		<li class='slide'>
-			<h3 >&lt;header&gt; = Header (Head area of the site)</h3>
-		</li>
-		<li class='slide'><h3>&lt;nav&gt; = Navigation (Menu/Navigation Area)
-	 
-			</h3>
-		</li>
-		<li class='slide'><h3>&lt;section&gt;  = Section
-			</h3>
-		</li>
-		<li class='slide'><h3>&lt;article&gt; = Article
-			</h3>
-		<li class='slide'><h3>&lt;footer&gt;  = Footer Area
-			</h3>
-		</li>
-		<li class='slide'><h3>&lt;aside&gt; = An area on a side (side bar)
-			</h3>
-		</li>
-	
-	</ul>		
-</article>
 
 <article class='slide slide-list'>
-	<h2>&lt;head&gt; = Meta Info</h2>
-	<pre class='prettyprint'>
-&lt;head&gt;
-  &lt;title&gt;Page Title - important &amp; Required&lt;/title&gt;
-  &lt;meta name='description' 
-        content='Page description - only important for search results page'/&gt;
-  
-  &lt;meta name='keywords' content='Keywords, not that important'/&gt;
-
-  &lt;link href="stylesheet.css" rel="Stylesheet" type="text/css" /&gt;
-  ...more stylesheets...
-
-  &lt;script src="somejavascriptfile.js"&gt;&lt;/script&gt;
-  ...more scripts...
-&lt;/head&gt;		
-	</pre>		
-</article>
-
-<article class='slide slide-list'>
-	<h2>&lt;header&gt;</h2>
-	<ul>
-		<li><h3>a group of introductory or navigational aids</h3>
-		</li>
-		<li><h3>logos, table of contents, search form</h3>
-		</li>
-	</ul>			
+	<h1>The Image Tag</h1>
+	<h3>images are defined with the <em>&lt; img &gt;</em></span> tag.</h3></br>
+		<div class="example">&lt;<em>img</em>&nbsp;<em>src</em>&nbsp; = "&nbsp;<em>file location</em>&nbsp;"/&gt;</div>
+	<h3>images have no closing tag.</br> The <em>/</em> is located at the end of the tag</h3>
 </article>	
 
 <article class='slide slide-list'>
-	<h2>&lt;nav&gt;</h2>
-	<ul>
-		<li><h3>a section of a page that links to other pages or to parts within the page 
-		</h3>
-		</li>
-		<li><h3>main navigation: home, about, contact, user navigation: login, register, account sidebar navigation: products, blogs, etc.</h3>
-		</li>
-	</ul>			
+	<h1>The Alt Attribute</h1>
+	<h3>The required alt attribute specifies an alternate text for an image, if the image cannot be displayed.</h3>
+	<div class="example">&lt;img &nbsp;src="lama.png"&nbsp;<b>alt="big llama"&gt;</b></div><br/>
+	<p class="callout">You decide what the description text is.</br> The alt attribute is required for your code to validate.
+	</p>
 </article>
 
 <article class='slide slide-list'>
-	<h2>&lt;section&gt;</h2>
-	<ul>
-		<li><h3>a group of content, typically with a heading</h3>
-		</li>
-		<li><h3>introduction,  <br/>news items,  <br/>contact information, <br/>chapters, <br/>tabbed pages in a tabbed dialog box,  <br/>numbered sections of a thesis.</h3>
-		</li>
-	</ul>			
-</article>
-
-
-<article class='slide slide-list'>
-	<h2>&lt;article&gt;</h2>
-	<ul>
-		<li><h3>Self-contained piece of content</h3>
-		</li>
-		<li><h3>forum post,<br/>magazine article,<br/>newspaper article,<br/>blog entry, <br/>user-submitted comment, <br/>interactive widget, <br/>independent item of content.</h3>
-		</li>
-	</ul>			
-</article>
-
-
-<article class='slide slide-list'>
-	<h2>&lt;footer&gt;</h2>
-	<ul>
-		<li><h3>represents the footer for the section it applies to. (does not have to mean the bottom of the page)</h3>
-		</li>
-		<li><h3>information about its section, <br/>who wrote it,  <br/>links to related documents,  <br/>copyright data, <br/>appendices,  <br/>indexes,  <br/>colophons,  <br/>license agreements.</h3>
-		</li>
-	</ul>			
-</article>
-
-<article class='slide slide-accent'>
-<h1>how you might use these tags</h1>
-</article>
-
-<article style='background-image:url(images/slashdot.jpg);' class='slide slide-background'>
-</article>
-
-<article style='background-image:url(images/slashdot2.jpg);' class='slide slide-background'>
-</article>
-
-<article style='background-image:url(images/bostinno.jpg);' class='slide slide-background'>
-</article>
-
-<article style='background-image:url(images/bostinno2.jpg);' class='slide slide-background'>
-</article>
-
-<article style='background-image:url(images/listapart.jpg);' class='slide slide-background'>
-</article>
-
-<article style='background-image:url(images/listapart2.jpg);' class='slide slide-background'>
-</article>
-
-
-<article class='slide slide-subhead'>
-<h1>Writing Good HTML</h1>
-<h2>"A Semantic Chop"</h2>
-</article>
-
-<article class='slide slide-list'>
-	<h1>The Goals</h1>
-	<ul>
-		<li class='slide'>
-			<h3>HTML tags used in Meaningful ways
-			</h3>
-		</li>
-		<li  class='slide'>
-			<h3>Validating markup</h3>
-		</li>
-		<li class='slide'><h3>All dynamic interactions added “unobtrusively” (usually via jQuery)</h3>
-		</li>
-	</ul>		
-</article>
-
-<article class='slide slide-accent'>
-<h1>Reminder! your HTML is not your design</h1>
-</article>
-
-<article class='slide slide-list'>
-	<h1>Tags We’ll be using</h1>
-	<p>The new (HTML5) semantic tags:<br/> <em>&lt;head&gt;, &lt;nav&gt;, &lt;section&gt;,&lt;article&gt;, &lt;footer&gt;, &lt;aside&gt;</em>
-	</p></br>
-	<p>The generic containers:  <em>&lt;div&gt;</em> and  <em>&lt;span&gt;</em>
-	</p></br>
-	<p>Images (<em>&lt;img&gt;</em>) and hyperlinks (<em>&lt;a&gt;</em>)
-	</p></br>
-	<p>The old semantic tags, including paragraph (<em>&lt;p&gt;</em>), headers (<em>&lt;h1&gt;</em>,<em>&lt;h2&gt;</em>,<em>&lt;h3&gt;</em>,<em>&lt;h4&gt;</em>)
-	</p></br>
-	<p>Lists, primarily unordered (<em>&lt;ul&gt;</em>). Unordered lists are often used for lists of menu items, form items, bulleted items, pretty much anything where there's a list of items that need to be styled consistently.
-	</p>		
-</article>
-
-
-
-<article class='slide slide-subhead'>
-<h1>You Must<br/>Validate &amp; Lint!</h1>
-<h2><a href='http://validator.w3.org/'>Validator</a> / <a href='http://lint.brihten.com/html/'>Linter</a> </h2>
-</article>
-
-<article class='slide slide-list'>
-<h2>Chop a Blog Post</h2>
-<img src='images/designingfun.png' width='569'/>
-</article>
-
-<article class='slide slide-list'>
-<h2>Blog Post Chop</h2>
-<textarea class='coder-editor coder-editor-split coder-editor-instant'  data-save='S2012-blog-post-chop'>
+<h2>Let's Link Some Images!!</h2>
+<p>link to all these images, cat.jpg (in a folder called images), llama.jpg (in the same folder as the html), otter.jpg (in the images folder in a folder called small), try to find owl.jpg and bunny.jpg</p>
+<textarea class='coder-editor coder-editor-split coder-editor-instant'  data-save='F012-image-find'>
 </textarea>
 </article>
 
-<article class='slide slide-list'>
-<h2>Chop a Full Site</h2>
-<img src='images/fullsite.png' />
+	
+<article class='slide slide-accent'>
+	<h1>Special Characters</h1>
+	http://www.webmonkey.com/2010/02/special_characters/
+	http://www.w3schools.com/tags/ref_entities.asp
 </article>
 
 <article class='slide slide-list'>
-<h2>Chop a Full Site</h2>
-<textarea class='coder-editor coder-editor-split coder-editor-instant' data-save='S2012-full-site-chop'>
+<h2>Why won't my text work?</h2>	
+<h3>Have you ever tried to type ampersands, quotation marks, greater-than or less-than signs into your code as text?</h3>
+<p>link to all these images, cat.jpg (in a folder called images), llama.jpg (in the same folder as the html), otter.jpg (in the images folder in a folder called small), try to find owl.jpg and bunny.jpg</p>
+<textarea class='coder-editor coder-editor-split coder-editor-instant'  data-save='F012-characters'>
 </textarea>
-</article>
+
+</article>	
 
 
 

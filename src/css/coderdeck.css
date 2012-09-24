@@ -262,7 +262,7 @@
     color: #444444;
     line-height: 2em;
     padding: .1em .15em 0 .15em;
-    margin-left: 1em;
+    margin-left: .5em;
     margin-bottom: .5em; }
     .deck-container .example em {
       display: inline-block;
@@ -271,6 +271,8 @@
       padding: .1em .15em 0 .15em;
       font-style: normal;
       margin: .5em 0; }
+    .deck-container .example b {
+      color: #2ca58f; }
   .deck-container code {
     color: #888; }
   .deck-container blockquote {

@@ -187,7 +187,7 @@ $gray-color:#CCC;
 		color:$main-color;  
 		line-height:2em; 
 		padding:.1em .15em 0 .15em; 
-		margin-left:1em;
+		margin-left:.5em;
 		margin-bottom:.5em;
 		
 		em { 
@@ -199,6 +199,8 @@ $gray-color:#CCC;
 			//margin-left:1em;
 			margin:.5em 0;
 		}
+		
+		b {color:$callout-color;}
 	}
 
 
