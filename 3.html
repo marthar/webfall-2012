@@ -187,16 +187,250 @@ function shuffleHomework(amt) {
 	<h1>Lists</h1>
 </article>
 
-
-<article class='slide slide-accent'>
-	<h1>Anchors</h1>
+<article class='slide slide-list'>
+<h1>Types of Lists</h1>
+	<ol>
+		<li class="slide">
+			<h3>Ordered Lists</h3>
+		</li>
+		<li class="slide">
+			<h3>Unordered Lists</h3>
+		</li>
+		<li class="slide">
+			<h3>Definition Lists</h3>
+		</li>
+	</ol>
 </article>
 
+
+<article class='slide slide-list'>
+<h1>Ordered Lists</h1>
+	<h3>Also known as numbered lists, each item in the list is numbered. </h3>
+	<ol>
+		<li>start with the <em>&lt; ol &gt;</em> tag </li> 
+		<li>end with the <em>&lt; /ol &gt;</em> tag </li>
+		<li>each item is wrapped in <em>&lt; li &gt;</em> and <em>&lt; /li &gt;</em> tags </li>
+	</ol></br>
+</article>
+
+<article class='slide slide-list'>	
+	<h2>Example Ordered List</h2>
+	<pre>	
+ &lt;ol&gt;
+	&lt;li&gt;List item 1&lt;/li&gt;
+	&lt;li&gt;List item 2&lt;/li&gt;
+	&lt;li&gt;List item 3&lt;/li&gt;
+ &lt;/ol&gt; 
+	</pre>
+</article>
+
+<article class='slide slide-list'>
+<h1>Unordered Lists</h1>
+	<h3>Also known as bulleted lists, each item in the list has a bullet. </h3>
+	<ol>
+		<li>start with the <em>&lt; ul &gt;</em> tag </li> 
+		<li>end with the <em>&lt; /ul &gt;</em> tag </li>
+		<li>each item is wrapped in <em>&lt; li &gt;</em> and <em>&lt; /li &gt;</em> tags </li>
+	</ol></br>
+</article>
+
+<article class='slide slide-list'>	
+	<h2>Example Unordered List</h2>
+	<pre>	
+ &lt;ul&gt;
+	&lt;li&gt;bullet item 1&lt;/li&gt;
+	&lt;li&gt;bullet item 2&lt;/li&gt;
+	&lt;li&gt;bullet item 3&lt;/li&gt;
+ &lt;/ul&gt; 
+	</pre>
+</article>
+
+<article class='slide slide-list'>
+<h1>Nested Lists</h1>
+	<h3>Lists inside of lists! <br/>
+	You can start a second list inside your first list </h3>
+	<ol>
+		<li>start in your <em>&lt; li &gt;</em> tag </li> 
+		<li>start a new <em>&lt; ul &gt;</em> before closing the <em>&lt; li &gt;</em> </li>
+		<li>add your nested list remembering to close the initial <em>&lt; /ul &gt;</em> tag at the VERY end </li>		
+	</ol></br>
+</article>
+
+<article class='slide slide-list'>	
+	<h2>Example Nested List</h2>
+	<pre>	
+&lt;ul&gt;
+  &lt;li&gt;bullet item 1&lt;/li&gt;
+  &lt;li&gt;bullet item 2&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;nested item 1&lt;/li&gt;
+      &lt;li&gt;nested item 2&lt;/li&gt;
+    &lt;/ul&gt;	
+  &lt;li&gt;bullet item 3&lt;/li&gt;
+&lt;/ul&gt; 
+	</pre>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Let's make some lists</h2>
+<p>Add a list inside the current list of where on the interwebs to post your images <br/> Add some bullets after the list of fun Meme Ideas</p>
+<textarea class='coder-editor coder-editor-split coder-editor-instant'>
+<h1>Step to starting a Meme</h1>
+<ol>
+  <li>Find cute animal picture</li>
+  <li>Add a snarky message</li>
+  <li>Post to interwebs</li>
+</ol>
+    
+</textarea>
+</article>
 
 
 <article class='slide slide-accent'>
 	<h1>Links</h1>
 </article>
+
+<article class='slide slide-list'>
+<h1>Links are why the Web is so awesome!</h1>
+	<h3>they are what makes surfing possible (no wetsuit required) </h3>
+	<ol>
+		<li>link from one website to another </li> 
+		<li>link from one page in your site to another</li>
+		<li>link from a specific part of a page to another</li>
+		<li>open a new window with a link</li>
+		<li>send an email with a link</li>
+	</ol></br>
+</article>
+
+<article class='slide slide-list'>
+	<h1>Link Tags</h1>
+	<p class="slide">Always an open and close<br/></p>
+		<div class="slide example"><em> &lt;a&gt;</em> &nbsp; <em> &lt;/a&gt;</em></div>
+	<p class="slide">This is the base of how we link to anything - what we add between those two tags is what we will link to. Remember you close your links!
+	</p>
+</article>
+
+<article class='slide slide-list'>
+	<h1>Add HREF</h1>
+	<h3>We tell the browser where to link by adding</h3>
+	<div class="slide example"><em>href = "..."</em></div>
+	<h3>Example</h3>
+	<h3>&lt;a &nbsp;href&nbsp; = "&nbsp;<em>http://www.website.com</em>&nbsp;"&gt;<em>This is your Link </em>&lt;a&gt;</h3>
+</article>
+
+<article class='slide slide-list'>
+	<h2>Link to Other Sites</h2>
+	<h3>We need to use an absolute url (don't forget the http or https-copy and paste from your browser to be sure)</h3><br/>
+	<h3>&lt;a &nbsp; href&nbsp; = "&nbsp;http://www.website.com&nbsp;"&gt;<em>This is your Link </em>&lt;a&gt;</h3>
+</article>
+
+<article class='slide slide-list'>
+	<h2>Open a Link in a New Window</h2>
+	<h3>we add an attribute inside the a tag of <em>target="_blank"</em></h3><br/>
+		<h3>Generally we don't want to open links in new windows (let the user decide if they want to do this)</h3><br/>
+	<h3>&lt;a &nbsp; href = "about.com"&nbsp; target = "about.com"&gt;<em>About Page</em>&lt;a&gt;</h3>
+</article>
+
+<article class='slide slide-list'>
+	<h2>Link to a page in your site</h2>
+	<h3>We need to tell the browser what .html document to link to/open</h3><br/>
+		<h3>If all the pages (.html files) are in the same folder you can just use the name of the file</h3><br/>
+	<h3>&lt;a &nbsp; href&nbsp; = "about.com"&gt;<em>About Page</em>&lt;a&gt;</h3>
+</article>
+
+<article class='slide slide-list'>
+	<h2>Typical Folder Structure</h2>
+		<img src="images/folder.png" class='top-image'/>
+</article>
+
+<article class='slide slide-list'>
+	<h2>Directory Relationships</h2>
+	<h3>If it's in the same folder<br/>
+	<em>= "contact.html"</em></h3><br/>
+	<h3>If it's inside another folder inside your folder<br/>
+	<em>= "images/logo.png"</em></h3><br/>
+	<h3>If it's outside the folder you are in (if we were inside the images folder and wanted to link to index.html)<br/>
+	<em>= "../index.html"</em></h3><br/>
+</article>
+
+
+<article class='slide slide-accent'>
+	<h1>Anchors</h1>
+	<h3>how we link to specific part of a page</h3>
+</article>
+
+<article class='slide slide-list'>
+<h2>How anchors work</h2>
+	<h3>They use the <em>id</em> attribute- great for 1-page scrolling sites</h3>
+	<ol>
+		<li>decide where on the page you want to link</li>
+		<li>add the <em>id=".."</em> attribute inside the opening tag</li> 		
+		<li>the attribute name should start with a letter or _ and be relevant to the text</li>
+		<li>can't reuse attribute names (ids only get used) </li>
+		<li>in the nav link to the anchor text using <em>href="#id-name"</em></li>
+	</ol>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Anchor Your Navs</h2>
+<textarea class='coder-editor coder-editor-full' data-coder-template='coderdeck-plain'>
+<header>
+	<h1>MY PAGE</h1>
+	<nav>
+	  <ul>  
+	    <li><a>Home</a></li>  
+	    <li><a>About</a></li>  
+	    <li><a>>Portfolio</a></li>
+	    <li><a>Contact</a></li>  
+	 </ul>
+	</nav>
+</header>
+<section>
+	<h1>Bacon Ipsum<h1>
+	<p>	Brisket chuck leberkas short ribs tenderloin tongue. Filet mignon sirloin jerky chicken strip steak t-bone. Ribeye short ribs fatback pancetta ham boudin, pork biltong tenderloin leberkas ball tip pork chop bresaola. Spare ribs kielbasa pork loin hamburger pork chop rump beef. Chuck spare ribs pork chop shank ribeye, leberkas turkey pig. Tri-tip tongue turducken, pig jowl brisket tail tenderloin flank rump bresaola pork chop short loin shoulder.</p>
+
+	<p>T-bone strip steak beef ribs, tenderloin drumstick pancetta biltong sirloin jowl speck kielbasa ball tip. Filet mignon leberkas jerky, cow shankle spare ribs fatback venison tri-tip short ribs kielbasa brisket. Swine pork loin beef kielbasa, prosciutto boudin beef ribs hamburger pork chop short ribs meatloaf frankfurter bresaola. Chuck kielbasa tail boudin.</p>	
+	
+	<p>Ball tip swine salami, strip steak boudin chicken fatback. Kielbasa bresaola ribeye swine speck pork belly. T-bone chuck turducken, tail pig ball tip kielbasa. Ribeye kielbasa tenderloin spare ribs, turducken beef ribs prosciutto drumstick brisket pastrami strip steak. Jerky salami biltong chicken, ground round pig pork chop meatball pork corned beef pastrami turducken shoulder.</p>
+
+		<p>Ball tip capicola chuck kielbasa prosciutto chicken. Meatloaf meatball corned beef pork belly, andouille frankfurter salami ground round biltong rump spare ribs. Capicola tail boudin, turducken pork belly ribeye bresaola bacon t-bone ball tip. Ribeye frankfurter spare ribs, ground round pork loin tail rump salami speck sirloin pastrami shank.</p>
+
+		<p>Ham hamburger capicola short loin pork loin kielbasa. Meatball biltong tri-tip pork belly speck pork loin, shankle bacon. Bacon frankfurter prosciutto, ribeye tri-tip jowl beef pork chop kielbasa bresaola t-bone pig shank short loin. Jerky brisket pork chop jowl.</p>
+</section>	
+
+</textarea>
+<script type='coder-solution'>
+<header>
+	<h1>MY PAGE</h1>
+	<nav>
+	  <ul>  
+	    <li><a href="#home">Home</a></li>  
+	    <li><a href="#about">About</a></li>  
+	    <li><a href="#portfolio">Portfolio</a></li>
+	    <li><a href="#contact">Contact</a></li>  
+	 </ul>
+	</nav>
+</header>
+<section>
+	<h1 id="home">Bacon Ipsum</h1>
+	<p>	Brisket chuck leberkas short ribs tenderloin tongue. Filet mignon sirloin jerky chicken strip steak t-bone. Ribeye short ribs fatback pancetta ham boudin, pork biltong tenderloin leberkas ball tip pork chop bresaola. Spare ribs kielbasa pork loin hamburger pork chop rump beef. Chuck spare ribs pork chop shank ribeye, leberkas turkey pig. Tri-tip tongue turducken, pig jowl brisket tail tenderloin flank rump bresaola pork chop short loin shoulder.</p>
+	<h1 id="about">About</h1>
+	<p>T-bone strip steak beef ribs, tenderloin drumstick pancetta biltong sirloin jowl speck kielbasa ball tip. Filet mignon leberkas jerky, cow shankle spare ribs fatback venison tri-tip short ribs kielbasa brisket. Swine pork loin beef kielbasa, prosciutto boudin beef ribs hamburger pork chop short ribs meatloaf frankfurter bresaola. Chuck kielbasa tail boudin.</p>	
+	<h1 id="portfolio">Portfolio</h1>	
+	<p>Ball tip swine salami, strip steak boudin chicken fatback. Kielbasa bresaola ribeye swine speck pork belly. T-bone chuck turducken, tail pig ball tip kielbasa. Ribeye kielbasa tenderloin spare ribs, turducken beef ribs prosciutto drumstick brisket pastrami strip steak. Jerky salami biltong chicken, ground round pig pork chop meatball pork corned beef pastrami turducken shoulder.</p>
+
+		<p>Ball tip capicola chuck kielbasa prosciutto chicken. Meatloaf meatball corned beef pork belly, andouille frankfurter salami ground round biltong rump spare ribs. Capicola tail boudin, turducken pork belly ribeye bresaola bacon t-bone ball tip. Ribeye frankfurter spare ribs, ground round pork loin tail rump salami speck sirloin pastrami shank.</p>
+	<h1 id="contact">Contact</h1>
+		<p>Ham hamburger capicola short loin pork loin kielbasa. Meatball biltong tri-tip pork belly speck pork loin, shankle bacon. Bacon frankfurter prosciutto, ribeye tri-tip jowl beef pork chop kielbasa bresaola t-bone pig shank short loin. Jerky brisket pork chop jowl.</p>
+</section>	
+</script>
+
+</article>
+
+
+
 
 <article class='slide slide-accent'>
 	<h1>Images</h1>
@@ -242,83 +476,26 @@ function shuffleHomework(amt) {
 	
 <article class='slide slide-accent'>
 	<h1>Special Characters</h1>
-	http://www.webmonkey.com/2010/02/special_characters/
-	http://www.w3schools.com/tags/ref_entities.asp
+	<h3>Have you ever tried to type ampersands, quotation marks, greater-than or less-than signs into your code as text?</h3>
+	<h3>There are some characters that are used in HTML that you can't just type in, the browser will think it's code and not text to be displayed.</h3> 	
 </article>
-
-<article class='slide slide-list'>
-<h2>Why won't my text work?</h2>	
-<h3>Have you ever tried to type ampersands, quotation marks, greater-than or less-than signs into your code as text?</h3>
-<p>link to all these images, cat.jpg (in a folder called images), llama.jpg (in the same folder as the html), otter.jpg (in the images folder in a folder called small), try to find owl.jpg and bunny.jpg</p>
-<textarea class='coder-editor coder-editor-split coder-editor-instant'  data-save='F012-characters'>
-</textarea>
-
-</article>	
-
-
-
-<article class='slide slide-list'>
-<h2>Basic Site Template</h2>
-<textarea class='coder-editor coder-editor-split coder-editor-instant'>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Title</title>
-    <link rel="stylesheet" type='text/css' href="sample.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Awesome Website</h1>
-      <nav id='top-menu'>
-      <ul class='menu'>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      </nav>
-    </header>
-    <section id='content'>
-      <article class='blog-post'>
-        <hgroup>
-          <h1>Lorem Ipsum Blog Post</h1>
-          <h2>By writer person</h2>
-        </hgroup>
-        <p>
-          Duis pellentesque velit sed est tincidunt nec lacinia nisi suscipit. Vivamus ut dolor vitae nisi gravida molestie. Morbi lorem augue, blandit id fringilla eget, vestibulum id nisl. Sed viverra eros ut sem rhoncus quis laoreet nisl condimentum. Duis aliquam viverra porttitor. Duis ligula ligula, venenatis sed sagittis in, mollis nec nulla. Curabitur imperdiet libero vitae sem sagittis sit amet posuere neque ultricies. Aenean lobortis, nunc sit amet tincidunt egestas, ipsum nulla dapibus nisl, at dapibus nisi sem non augue. Pellentesque convallis risus sit amet arcu porta et blandit mauris ultrices. Donec facilisis mollis elementum. Nam eget faucibus d</p>
-        <h2>Lorem McIpsum</h2>
-          <p>Nulla in ullamcorper erat. Curabitur auctor sagittis sollicitudin. Phasellus urna erat, vestibulum congue rutrum non, bibendum eu mauris. Aenean varius vulputate ante, quis lacinia felis sollicitudin quis. Nulla vitae dui sem. Ut rhoncus euismod dignissim. Pellentesque metus nisl, convallis id condimentum sed, ullamcorper sit amet odio. Suspendisse ut augue massa, nec mattis risus. Vestibulum mattis, leo et posuere porttitor, mi tortor porta quam, imperdiet fermentum mi turpis ac erat. Aliquam ut nisl et velit aliquam imperdiet at sit amet velit. Sed non hendrerit quam. Fusce dignissim, tellus sed blandit auctor, mi sem ultricies leo, eget iaculis sem ligula vitae mauris.</p>
-        <footer class='post-footer'>
-        Posted On 1/1/2011
-        </footer>
-      </article>
-      <aside id='sidebar'>
-        <h1>Older Posts</h1>
-        <ul>
-        	<li><a href="#">Link1</a></li>
-        	<li><a href="#">Link2</a></li>
-        </ul>
-      </aside>
-    </section>
-    <footer id='site-footer'>
-      <nav id='footer-nav'>
-        <ul>
-        	<li><a href="#">Contact Us</a></li>
-        	<li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </nav>
-
-    </footer>
-  </body>
-</html>
-</textarea>
-</article> 
 
 
 <article class='slide slide-subhead'>
-<h1>Let your HTML be your outline</h1>
-<h2><a href='http://gsnedders.html5.org/outliner/'>http://gsnedders.html5.org/outliner/</a></h2>
+<h1>Google is our friend</h1>
+<h3><a href='http://www.webmonkey.com/2010/02/special_characters/'>http://www.webmonkey.com/2010/02/special_characters/</a></h3>
+<h3><a href='http://www.w3schools.com/tags/ref_entities.asp'>http://www.w3schools.com/tags/ref_entities.asp</a></h3>
 </article>
+
+
+<article class='slide slide-list'>
+<h2>Make my Characters Work</h2>	
+<p>Look up and try adding some fun characters to your text</p>
+<textarea class='coder-editor coder-editor-split coder-editor-instant'  data-save='F012-characters'>
+</textarea>
+</article>	
+
+
 	
 
 <article class='slide slide-homework'>
