@@ -107,11 +107,18 @@ $gray-color:#CCC;
 	}	
 	
 	.slide-accent {
-		background:$callout-color;;
-		h1 { font-size:4em;  color:white; @include no-transform; padding-top:3em;}
+		background:$callout-color;
+		color:white;
+		h1 { font-size:4em;  color:white; @include no-transform; padding-top:3em;
+			a { color:white; 
+				&:hover {color:$gray-color;}	
+			}
+		}
+		h2 { color:white; @include no-transform; padding-top:3em;}
+		h3 { color:white; @include no-transform; padding-top:3em;}
 		p { font-size:1.5em; color:white; text-align:center; text-transform:none; padding-top:0;}
-	}	
-	
+			
+	}
 	.slide-homework {
 		padding:0 10%;
 		background:$main-color;
@@ -127,9 +134,7 @@ $gray-color:#CCC;
 					}
 			}
 		li { background-color:inherit;  padding-left:.5em; padding-bottom:.5em; }
-		p { }		
-
-		
+		p { }				
 	}
 
 	.large { color:red;}
@@ -154,7 +159,7 @@ $gray-color:#CCC;
 		@include sans-font;
 		color:$callout-color;
 		border:none;
-		letter-spacing:-.02em; word-spacing:.1em;
+		letter-spacing:-.02em; word-spacing:.13em;
 		padding:0;
 	}
 

@@ -137,9 +137,32 @@
     float: left;
     padding-right: .3em; }
   .deck-container .slide-accent {
-    background: #2ca58f; }
+    background: #2ca58f;
+    color: white; }
     .deck-container .slide-accent h1 {
       font-size: 4em;
+      color: white;
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-tranform: none;
+      position: static;
+      padding-top: 3em; }
+      .deck-container .slide-accent h1 a {
+        color: white; }
+        .deck-container .slide-accent h1 a:hover {
+          color: #cccccc; }
+    .deck-container .slide-accent h2 {
+      color: white;
+      transform: none;
+      -webkit-transform: none;
+      -moz-transform: none;
+      -ms-transform: none;
+      -o-tranform: none;
+      position: static;
+      padding-top: 3em; }
+    .deck-container .slide-accent h3 {
       color: white;
       transform: none;
       -webkit-transform: none;
@@ -235,7 +258,7 @@
     color: #2ca58f;
     border: none;
     letter-spacing: -0.02em;
-    word-spacing: .1em;
+    word-spacing: .13em;
     padding: 0; }
   .deck-container h3 {
     font-size: 1.2em;
