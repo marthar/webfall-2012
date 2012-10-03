@@ -78,11 +78,13 @@ $gray-color:#CCC;
 
 
 body {
+	font-size:1.25em;
 	@include serif-font;
-	background:#fff;
-	background-color:#F8F8F8;
+	/*background-color:#F8F8F8;
+	background-image:url('../../images/cream_dust.png');*/
 
-	
+
+	p {	line-height:1.5em;}
 	
 
 	ul {
@@ -103,26 +105,26 @@ body {
 		line-height: 1em;
 		text-transform:uppercase;	
 		color:$callout-color;
-		font-size:4em;	
+		font-size:3em;	
 		letter-spacing:-.02em; word-spacing:.1em;
 
 	}
 
 
 	h2 {
-		font-size:3.5em;
+		font-size:3em;
 		line-height:1.2em;
 		@include sans-font;
 		color:$callout-color;
 		border:none;
 		letter-spacing:-.02em; word-spacing:.13em;
-		padding-top:4em;	
+	
 	}
 
 	h3 {
-		font-size:1.2em;
+		font-size:1.25em;
 		font-weight:normal;
-		padding-top:.5em;
+		padding-top:.75em;
 	}
 	
 	h4 {
@@ -138,10 +140,10 @@ body {
 
 	
 	a {
-		&, &:hover, &:focus, &:active, &:visited {
+		
 			color:$link-color;
 			text-decoration:none;
-		}
+		
 		
 		&:hover, &:focus {
 			color:$callout-color;
@@ -170,13 +172,23 @@ body {
 	header {
 		top:0;
 		height:4.5em;
-		background-color:$gray-color;
+		background-image:url('../../images/subtle_surface.png');
+		/*background-color:$gray-color;*/
+		opacity:0.95;
+		filter:alpha(opacity=95);
 		position:fixed;
 		width:100%;
+		box-shadow: 0px 0px 5px #666;
 	}
 	
 	section {
-		margin:0 50px;
+		padding:6em 6em 6em 6em;
+
 	}
+	
+	#material {background-color:#F8F8F8;}
+	#follow {background-image:url('../../images/subtle_dots.png');}
+	#resources {background-color:#F8F8F8;}
+	#help {background-color:#fff;}
 }
 
