@@ -56,6 +56,8 @@
       margin-left: 2em;
       text-align: left;
       line-height: 1.3em; }
+    .deck-container .slide-list img {
+      margin: 0; }
   .deck-container .slide-subhead h1 {
     margin: 0px;
     padding-top: 2em;

@@ -378,69 +378,84 @@ function shuffleHomework(amt) {
 </ul>
 </article>
 
+<article class='slide slide-accent'>
+	<h1>Box Model</h1>
+</article>
+
+
 <article class='slide slide-image'>
 <h1>Layout = Box Model</h2>
 <img src='images/layout.jpg'/>
-</article>
-
-<article class="slide slide-subhead">
-<h2><br/><br/>Understanding floats + Positioning</h2>
-	<p><a href='http://www.barelyfitz.com/screencast/html-training/css/positioning/'>http://www.barelyfitz.com/screencast/html-training/css/positioning/</a></p>
-</article>
-
-<article class="slide slide-list">
-<h1>Positioning 101</h1>
-	<ul>
-		<li class="slide">
-			<h3>Use “position:relative” to create an zone for absolutely positioning content</h3>
-		</li>
-		<li class="slide">
-			<h3>Use “position:absolute; top:...; left:....” to place something inside that zone.</h3>
-		</li>
-	</ul>
 </article>
 
 <article class="slide slide-list">
 <h1>Layout Properties</h1>
 <ul>
 <li class="slide">
-	<h3>Box model: margin, padding, width, height</h3>
+	<h3>Content:text the tags are wrapping</h3>
+		<ul>
+			<li>color:red;</li>
+			<li>font-size:20px;</li>
+			<li>text-transform:uppercase;</li>
+		</ul>	
 </li>
 <li class="slide">
-	<h3>top, bottom, left, right</h3>
+	<h3>Padding:color behind the text</h3>
+	<ul>
+		<li>padding-top:5px; (-left, -right, -top, -bottom)</li>
+		<li>padding:5px 10px;</li>
+		<li>padding:5px 3px 10px 20px;</li>
+	</ul>	
+	
 </li>
 <li class="slide">
-	<h3>border</h3>
+	<h3>Border:line around the padding</h3>
+	<ul>
+		<li>border-style:solid;</li>
+		<li>border-width:5px;</li>
+		<li>border-color:red;</li>
+		<li>border:5px solid red;</li>
+	</ul>
 </li>
 <li class="slide">
-	<h3>position [ static, relative, absolute ]</h3>
-</li>
-<li class="slide">
-	<h3>ﬂoat [ left, right, none ], clear [ left, right, both]</h3>
-</li>
-<li class="slide">
-	<h3>display [none, block, inline inline-block]</h3>
-</li>
-<li class="slide">
-	<h3>visibility [visible, hidden]</h3>
-</li>
-<li class="slide">
-	<h3>background (color, image, repeat, position)</h3>
-</li>
-<li class="slide">
-	<h3>CSS3 (border-radius, box-shadow)</h3>
+	<h3>Margin:transparent space around the padding and boarder</h3>
+	<ul>
+		<li>margin-top:5px; (-left, -right, -top, -bottom)</li>
+		<li>margin:5px 10px;</li>
+		<li>margin:5px 3px 10px 20px;</li>
+	</ul>
 </li>
 </ul>
 </article>
 
-<article class='slide slide-image'>
-<h1>Layout = Box Model</h2>
-<img src='images/layout.jpg'/>
+<article class='slide slide-list'>
+<h2>Box Model Exercise</h2>
+<textarea class='coder-editor coder-editor-split coder-editor-instant'  data-save='S2012-blog-post-chop'>
+<style>
+  #box1 { 
+    background-color:teal;
+  }
+
+  #box2 { 
+    background-color:orange;
+  }
+
+
+</style>
+
+<div id="box1">I'm a box</div>
+<div id="box2">I'm a box 2!</div>
+</textarea>
+</article> 
+
+
+<article class='slide slide-accent'>
+	<h1>How do you layout elements on the page?</h1>
 </article>
 
 
 <article class="slide slide-list">
-<h1>Only two types of positioning:</h1>
+<h1>Only two ways to layout:</h1>
 	<ul>
 		<li class="slide">
     <h3>1. Using floats to align things next to each other</h3>
@@ -463,7 +478,8 @@ function shuffleHomework(amt) {
 </article>
 
 <article class="slide slide-list">
-<h1>Positioning with floats</h1>
+<h1>Layout with floats</h1>
+<h3>Use this for content, page elements that need to flow or resize</h3><br/>
 	<ul>
 		<li class="slide">
     <h3>Use float:left or float:right to float elements</h3>
@@ -480,26 +496,116 @@ function shuffleHomework(amt) {
 	</ul>
 </article>
 
+<article class='slide slide-list'>
+<h2>Float Exercise</h2>
+<h3>navs are a great example of floating elements - we'll make this from a list</h3>
+<h3><img src="images/nav-floats.png"/></h3>
+</article>
 
-<article class="slide slide-list">
-<h2>Clearfix</h2>
-	<pre>.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-	}
+<article class='slide slide-list'>
+<h2>Float Exercise</h2>
+<textarea class='coder-editor coder-editor-split coder-editor-instant' >
+<style>
 
-.clearfix { display: inline-block; }
-html[xmlns] .clearfix { display: block; }
-* html .clearfix { height: 1%; }</pre>
+
+</style>
+
+<nav>
+  <ul>
+    <li>home</li>
+    <li>about</li>
+    <li>shop</li>
+    <li>contact</li>
+  </ul>
+</nav>
+</textarea>
+<script type='coder-solution'>
+<style>
+  li {
+    list-style:none;
+    float:left;
+    margin:10px;
+    background-color:teal;
+    padding:7px 14px;
+    color:white;
+    text-transform:uppercase;
+    font-family:Helvetica;
+  }
+
+
+</style>
+
+<nav>
+  <ul>
+    <li>home</li>
+    <li>about</li>
+    <li>shop</li>
+    <li>contact</li>
+  </ul>
+</nav>
+</script>
+
+</article> 
+
+<article class='slide slide-accent'>
+	<h1>Positioning</h1>
 </article>
 
 <article class="slide slide-list">
-<h1>Positioning Absolutely</h1>
+<h1>Position</h1>
+<h3>used for elements that will always stay in the same place (logos, navbars, footers)</h3><br/>
 	<ul>
+		<li class="slide">
+			<h3>position:static</h3>
+		</li>
+		<li class="slide">
+			<h3>position:relative</h3>
+		</li>
+		<li class="slide">
+			<h3>position:absolute</h3>
+		</li>
+		<li class="slide">
+			<h3>position:fixed</h3>
+		</li>				
+	</ul>
+</article>
+
+<article class="slide slide-list">
+<h1>Position Static</h1>
+	<ul>
+		<li class="slide">
+			<h3>The default - all elements are set to this already</h3>
+		</li>
+	</ul>
+</article>
+
+<article class="slide slide-list">
+<h1>Position Relative</h1>
+	<ul>
+		<li class="slide">
+			<h3>Same as Static until you set coordinates</h3>
+		</li>
+		<li class="slide">
+			<h3>Use coordinates to move the item "relative" to where it is normally<br/>
+				example: top:0px; left:0px;<br/>
+				example: bottom:5px; right:20px;</h3> 
+		</li>
+		<li class="slide">
+			<h3>When you move things relatively, the space they take-up on the page stays the same</h3>
+		</li>
+	</ul>
+</article>
+
+
+<article class="slide slide-list">
+<h1>Position Absolute</h1>
+	<ul>
+		<li class="slide">
+			<h3>Can move elements anywhere using top, left, right, bottom</h3>
+		</li>
+		<li class="slide">
+			<h3>Warning: when you position absolutely the page element is removed completely from the flow of the page</h3>
+		</li>		
 		<li class="slide">
 			<h3>Use “position:relative” to create an zone for absolutely positioning content</h3>
 		</li>
@@ -509,84 +615,104 @@ html[xmlns] .clearfix { display: block; }
 	</ul>
 </article>
 
-
-
-
-<article class='slide slide-image'>
-<h1>Exercise: we want this</h1>
-<img src='images/position-exercise.png'/>
+<article class="slide slide-list">
+<h1>Position Fixed</h1>
+	<ul>
+		<li class="slide">
+			<h3>Use rarely - usually only for sticky navbars (page will scroll and nav stays at the top or bottom)</h3>
+		</li>
+	</ul>
 </article>
-
-<!-- Example
-<style>
-  #container { background-color:lightgray; margin:20px; height:300px; }
-
-  #container-top { position:relative; margin:10px; padding:10px; background-color:gray; }
-  #top-left { posiition:absolute; left:0px; top:0px; padding:10px; backbround-color:gray; }
-  #top-center { position:absolute; left:40%; top:0px; background-color:red; }
-  
-  #container-center { padding:0 10px; }
-  .blocks { position:absolute; bottom:0px; right:0px; }
-  .block { width:20px; height:20px; background-color:white; float:left; margin:0 10px; }
-  
-  .left { float:left; width:40%; height:150px; background-color:white; }
-  .right { float:right; width:40%; height:150px; background-color:white; }
-  
-  #container-bottom { clear:both; padding:10px;  }
-  .bottom { text-align:center; background-color:darkgray; padding:10px; }
-  
-  
-</style>
-
--->
 
 <article class='slide slide-list'>
 <h2>Positioning Exercise</h2>
-<textarea class='coder-editor coder-editor-split' data-coder-template="coderdeck-plain" id='coderdeck-default' data-save='webfall2012-04-example'>
-<style>
-  #container { background-color:lightgray; margin:20px; padding:20px; height:300px; }
+<h3>using position:relative and absolute let's try to make this</h3>
+<h3><img src="images/positioning-ex.gif"/></h3>
+</article>
 
+
+<article class='slide slide-list'>
+<h2>Positioning Exercise</h2>
+<textarea class='coder-editor coder-editor-split coder-editor-instant' >
+<style>
+  #container { 
+    background-color:lightgray; 
+    margin:20px; height:400px; 
+  }
+
+  .block1 {
+    background-color:orange;
+    padding:50px;
+  }
+
+  .block2 {
+    background-color:red;
+    padding:50px;
+  }
+
+  .block3 {
+    background-color:teal;
+    padding:50px;
+  }
 
 </style>
-<div id='site'>
-Above Container
-<div id='container'>
-  <div id='container-top'>
-    <div id='top-left'>I'm in the top left!</div>
-    <div id='top-center'>I'm in the top center!</div>
-  
-    <div class='blocks'>
-      <div class='block'></div>
-      <div class='block'></div>
-      <div class='block'></div>
-      <div class='block'></div>
-    </div>
-  </div>
-  <div id='container-center'>
-    <div class='left'>I'm Left</div>
-    <div class='right'>I'm Right</div>
-  </div>
-  <div id='container-bottom'>
-    I'm at the bottom
-  </div>
-</div>
-Below Container
-</div>
+<section id='container'>
+	  <div class='block1'></div>
+	  <div class='block2'></div>
+	  <div class='block3'></div>
+</section>
 </textarea>
+<script type='coder-solution'>
+<style>
+  #container { 
+    background-color:lightgray; 
+    margin:20px; height:400px; 
+    position:relative;
+  }
+
+  .block1 {
+    background-color:orange;
+    padding:50px;
+    position:absolute;
+  }
+
+  .block2 {
+    background-color:red;
+    padding:50px;
+    position:absolute;
+    top:100px; 
+    left:100px;
+  }
+
+  .block3 {
+    background-color:teal;
+    padding:50px;
+    position:absolute;
+    bottom:0;
+    right:0;
+  }
+
+</style>
+<section id='container'>
+	  <div class='block1'></div>
+	  <div class='block2'></div>
+	  <div class='block3'></div>
+</section>
+
+</script>
 </article> 
 
 
 
-
-<article class='slide slide-image'>
-<h1>In Class Exercise 1: we want this</h1>
+<article class='slide slide-list'>
+<h1>Combining Floats and Positioning</h1>
 <img src='images/position-exercise.png'/>
 </article>
 
 
 <article class='slide slide-list'>
-<h2>Positioning Exercise</h2>
-<textarea class='coder-editor coder-editor-full' data-coder-template="coderdeck-plain" id='coderdeck-default'>
+<h2>Floats and Positioning Exercise</h2>
+<textarea class='coder-editor coder-editor-full' data-coder-template="coderdeck-plain" id='coderdeck-default' data-save='fall2012-positioning'>
 <style>
   #container { background-color:lightgray; margin:20px; height:300px; }
 
@@ -611,7 +737,7 @@ Below Container
 
 
 <article class='slide slide-accent'>
-	<h1>Techniques</h1>
+	<h1>More Layout Techniques</h1>
 </article>	
 
 <article class="slide slide-subhead">
@@ -625,7 +751,7 @@ Below Container
 
 <article class='slide slide-list'>
 	<h1>Centering Content</h1>
-	<h2>Give it a width and set margin: 0 auto;</h2>
+	<h3>Give it a width and set margin: 0 auto;</h3>
 <pre>
 section#content {
   margin:0 auto;
@@ -647,6 +773,11 @@ section#content {
 			</h3>
 		</li>
 	</ul>
+</article>
+
+<article class="slide slide-subhead">
+<h1>Beginner Mistakes</h1>
+	<h3><a href="http://css-tricks.com/css-beginner-mistakes-1/">Beware of Divitus and Classitus</a></h3>
 </article>
 
 
@@ -735,11 +866,12 @@ footer#site-footer {     clear:both; background-color:black;     color:white
 </article>
 
 <article class="slide slide-image">
+	<h2>Exercise: Pulling it all Together</h2>
 	<img src='images/screenshot.png'/>
 </article>
 	
 <article class='slide slide-list'>
-<h2>In Class Exercise 2</h2>
+<h2>Exercise: Pulling it all Together</h2>
 <textarea class='coder-editor coder-editor-full'>
 
 <style>
@@ -905,24 +1037,15 @@ body {
 </script>
 </article>
 
-<article class='slide slide-list'>
-	<h1>Homework</h1>
-	<p>Default paragraphs to two paragraphs, with floated images<br/>
-		<h3><br/><img src="images/css-default.png" class='top-image'/><br/><br/></h3>
-</article>
-
-
-<article class='slide slide-list'>
-	<h1>End Result</h1>
-		<h3><br/><img src="images/css-style.png" class='top-image'/><br/><br/></h3>
-</article>
-
 
 
 <article class='slide slide-homework'>
 <h2>Homework</h2>
-<h2 class='slide'>Reading</h2>
+<h3 class='slide'>Reading</h3>
 	<ul class='slide'>	
+		<li>
+			<h3>Duckett, Chapters 10, 15, 16</h3>
+		</li>
 		<li>
             <h3><a href='http://www.alistapart.com/articles/css-floats-101/'>CSS Floats 101</a>
 			</h3>
@@ -933,13 +1056,13 @@ body {
 		</li>
 	</ul>
 	
-	<h2 class='slide'>Coding</h2>
+	<h3 class='slide'>Coding</h3>
        <ul class='slide'>
 			<li>
-				<h3>Finish exercise #2 (Llama floats in 04-css-llama)</h3>				
+				<h3>Style the Layout of your Recipe card (create a css sheet, add in class & id hooks to your html if needed)</h3>				
 			</li>
 			<li>
-				<h3>Take your cats vs. dogs chop and style it (put it in your 05-cats-vs-dogs folder)</h3>
+				<h3>Style the Layout of  Cats vs. Dogs</h3>
 			</li>
 		</ul>
 </ul>	
