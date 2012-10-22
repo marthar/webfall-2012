@@ -110,7 +110,7 @@ $gray-color:#CCC;
 	.slide-accent {
 		background:$callout-color;
 		color:white;
-		h1 { font-size:4em;  color:white; @include no-transform; padding-top:3em;
+		h1 { font-size:4em;  color:white; @include no-transform; padding-top:20%;
 			a { color:white; 
 				&:hover {color:$gray-color;}	
 			}

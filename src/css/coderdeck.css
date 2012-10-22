@@ -150,7 +150,7 @@
       -ms-transform: none;
       -o-tranform: none;
       position: static;
-      padding-top: 3em; }
+      padding-top: 20%; }
       .deck-container .slide-accent h1 a {
         color: white; }
         .deck-container .slide-accent h1 a:hover {
