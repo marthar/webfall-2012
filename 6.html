@@ -101,19 +101,19 @@
 			<h3>Discuss Readings</h3>
 		</li>
 		<li class="slide">
-			<h3>CSS Layout</h3>
+			<h3>CSS Review</h3>
 		</li>
 		<li class="slide">
 			<h3>CSS Styling Basics</h3>
 		</li>
 		<li class="slide">
-			<h3>Making it Move</h3>
+			<h3>CSS3</h3>
 		</li>
 		<li class="slide">
 			<h3>Making it Move</h3>
 		</li>
 		<li class="slide">
-			<h3>Excercises</h3>
+			<h3>Exercises</h3>
 		</li>
 		<li class="slide">
 			<h3>Homework</h3>
@@ -332,6 +332,98 @@ function shuffleHomework(amt) {
 </article>
 
 
+
+<article class='slide slide-accent'>
+	<h1>How do we use this in our sites?</h1>
+</article>
+
+<article class='slide slide-list'>
+	<h1>Remember</h1>
+	<ul>
+	<li><h3>Styles are Separate from HTML</h3></li>	
+	<li><h3>Usually only need 1 style sheet</h3></li>
+	<li><h3>Link to CSS in your HTML</h3></li>
+	<li><h3>Your CSS should start with a <a href='http://meyerweb.com/eric/tools/css/reset/'>RESET</a></h3></li>
+	</ul>	
+</article>
+
+	
+<article class='slide slide-list'>
+		<p><br/><img src="images/style-linking-example.gif" class='top-image'/><br/><br/></p>
+</article>
+
+<article class='slide slide-list'>
+	<h2>In Your HTML</h2>
+	<pre class='prettyprint'>
+&lt;head&gt;
+
+  &lt;link href="stylesheet.css" rel="Stylesheet" type="text/css" /&gt;
+
+&lt;/head&gt;		
+	</pre>		
+</article>
+
+
+
+<article class='slide slide-list'>
+	<h2>Your CSS begins AFTER the reset</h2>
+	<pre class='prettyprint'>
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* END OF RESET - Start of Your CSS*/
+
+
+	</pre>		
+</article>
+
+
 <article class='slide slide-accent'>
 	<h1>Styles</h1>
 </article>
@@ -530,14 +622,33 @@ p {
 	</ol>	
 </article>	
 
+<article class='slide slide-accent'>
+<h1>Logo Replacement</h1>
+</article>
 
-
-<article class='slide slide-image'>
-<h1>Exercise: navbar</h1><br/>
-<p><img src='images/menubar.png'/></p>
+<article class='slide slide-list'>
+<h2>Logo Replacement</h2>
+<textarea class='coder-editor coder-editor-split' data-coder-template="coderdeck-plain" id='coderdeck-default'>
+&lt;style&gt;
+#site-header h1 a {
+ display:block;  
+ width:300px; 
+ height:80px;  
+ background:url(images/logo.png) no-repeat top left; 
+ text-indent:-9999px;
+ }
+</style>
+<header id='site-header'>
+ <h1><a href='#'>My Awesome Website</a></h1>
+</header>
+</textarea>
 </article>
 
 
+
+<article class='slide slide-accent'>
+<h1>Navbar Excercise 1: Styling</h1>
+</article>
 
 
 <article class='slide slide-list'>
@@ -568,22 +679,24 @@ p {
     position:absolute;
     top:20px;
     right:20px;
-    background-color:gray;
+    background-color:teal;
     float:right;
-    border-radius:10px;
-    box-shadow:4px 4px 4px #666;
+    border-radius:5px;
+    box-shadow:4px 4px 4px #ddd;
     padding:0 10px;
     margin:0 20px;
  }
   #main-menu li { 
     float:left; 
-    border-right:1px solid #CCC;
+    border-right:3px solid #fff;
   }
   #main-menu li.last { border:0px; }
   #main-menu li a { display:block; 
-    padding:15px 20px;
-    font-size:18px;
+    padding:15px 15px;
+    font-size:17px;
     color:white;
+    font-family:sans-serif;
+    text-transform:uppercase;
     text-decoration:none;
   }
   #main-menu li a:hover { background-color:#DDD; }
@@ -603,41 +716,16 @@ p {
 </script>
 </article>
 
-<article class='slide slide-list'>
-<h2>Logo Replacement</h2>
-<textarea class='coder-editor coder-editor-split' data-coder-template="coderdeck-plain" id='coderdeck-default'>
-&lt;style&gt;
-#site-header h1 a {
- display:block;  
- width:300px; 
- height:80px;  
- background:url(images/logo.png) no-repeat top left; 
- text-indent:-9999px;
- }
-</style>
-<header id='site-header'>
- <h1><a href='#'>My Awesome Website</a></h1>
-</header>
-</textarea>
-</article>
-
-
-
-<article class='slide slide-list'>
-	<h1>07-css-robots</h1>
-		<h3><br/><img src="images/evilgenius.png" class='top-image'/><br/><br/></h3>
-</article>
-
-
 
 
 
 <article class='slide slide-accent'>
-	<h1>Making it Move</h1>
+	<h1>Drop-Downs</h1>
 </article>
 
 <article class='slide slide-list'>
 <h2>Basic Navbar</h2>
+<p>hidden dropdown</p>
 <textarea class='coder-editor coder-editor-full'>
 <style>
 
@@ -697,13 +785,9 @@ p {
 </textarea>
 </article>
 
-<article class='slide slide-subhead'>
-<h1>Rollover Navs</h1>
-<h2>pure CSS</h2>
-</article>
 
 <article class='slide slide-list'>
-<h2>Drop-Down</h2>
+<h2>Nav Drop-Down</h2>
 <p>Adding :hover selector</p>
 <textarea class='coder-editor coder-editor-full'>
 <style>
@@ -784,14 +868,10 @@ p {
 </textarea>
 </article>
 
-<article class='slide slide-subhead'>
-<h1>Drop-Down Navs</h1>
-<h2>add a little animation</h2>
-</article>
 
 
 <article class='slide slide-accent'>
-	<h1>Making it Move</h1>
+	<h1>CSS3</h1>
 </article>
 
 <article class="slide slide-list">
@@ -819,10 +899,12 @@ p {
 </article>	
 
 
-<article class='slide slide-subhead'>
-  <h1>Let's make a polaroid</h1>
-  <img src='images/polaroid.jpg'/>
-
+<article class='slide slide-image'>
+<h1><img src="images/polaroid.png" class='top-image'/>Let's make a polaroid</h1>
+<h3>Using</h3>
+<ul>
+	<li><h3>-webkit-transform:rotate(deg);</h3></li>	
+		 border-radius:4px;
 </article>
 
 <article class='slide slide-list'>
@@ -972,14 +1054,18 @@ p {
 <h3 class='slide'>Reading</h3>
 	<ul class='slide'>	
 		<li>
-			<h3>Duckett, Chapters 10, 15, 16</h3>
+			<h3>Duckett, Chapters 11, 12, 13, 14</h3>
 		</li>
 		<li>
-            <h3><a href='http://www.alistapart.com/articles/css-floats-101/'>CSS Floats 101</a>
+            <h3><a href='http://coding.smashingmagazine.com/2009/10/05/mastering-css-coding-getting-started/'>Mastering CSS Coding: Getting Started</a>
 			</h3>
 		</li>
 		<li>
-            <h3><a href='http://www.alistapart.com/articles/css-positioning-101/'>CSS Positioning 101</a>
+            <h3><a href='http://coding.smashingmagazine.com/2008/05/02/improving-code-readability-with-css-styleguides/'>Improving Code Readability With CSS Styleguides</a>
+			</h3>
+		</li>
+		<li>
+            <h3><a href='http://www.alistapart.com/articles/css3-bling-in-the-real-world/'>CSS3 Bling in the Real World</a>
 			</h3>
 		</li>
 	</ul>
@@ -987,13 +1073,16 @@ p {
 	<h3 class='slide'>Coding</h3>
        <ul class='slide'>
 			<li>
-				<h3>Style the Layout of your Recipe card (create a css sheet, add in class &amp; id hooks to your html if needed)</h3>				
+				<h3>Finish Styling &amp; Layout of your Recipe card</h3>				
 			</li>
 			<li>
-				<h3>Style the Layout of  Cats vs. Dogs (we'll apply formatting style later)</h3>
+				<h3>Finish Styling &amp; Layout of  Cats vs. Dogs</h3>
 			</li>
 			<li>
-				<h3>Style the Layout of  Llama Love</h3>
+				<h3>Finish Styling &amp; Layout of Llama Love</h3>
+			</li>
+			<li>
+				<h3>Start Styling &amp; Layout of Robots (will work on for next 2 weeks)</h3>
 			</li>
 		</ul>
 </ul>	
@@ -1002,21 +1091,20 @@ p {
 </article>
 
 <article class='slide slide-list'>
-	<h2>Llama Homework</h2>
-	<p>Default paragraphs to two paragraphs, with floated images<br/>
-		<h3><br/><img src="images/css-default.png" class='top-image'/><br/><br/></h3>
+	<h1>Robots</h1>
+		<h3><br/><img src="images/evilgenius.png" class='top-image'/><br/><br/></h3>
 </article>
 
-
 <article class='slide slide-list'>
-	<h2>Llama End Result</h2>
+	<h2>Llama Love</h2>
 		<h3><br/><img src="images/css-style.png" class='top-image'/><br/><br/></h3>
 </article>
 
 <article class='slide slide-list'>
-	<h2>Layout for Cats vs. Dog</h2>
+	<h2>Cats vs. Dog</h2>
 		<h3><br/><img src="images/dogsvscat.png" class='top-image'/><br/><br/></h3>
 </article>
+
 
 
 <!-- Update these paths to point to the correct files. -->
