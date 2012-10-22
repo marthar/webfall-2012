@@ -294,7 +294,7 @@ function shuffleHomework(amt) {
 <h1>Values</h1>
 <ul>
 <li class="slide">
-	<h3>colors: #FFF, #FFFFFF, rgb(255,255,255), gray, black, red</h3>
+	<h3>colors: #FFF, #FFFFFF, rgb(255,255,255), rgba(255,255,255, 1), gray, black, red</h3>
 </li>
 <li class="slide">
 	<h3>numbers: 0, 25px, 1.1em, 100%<br/>
@@ -307,24 +307,58 @@ function shuffleHomework(amt) {
 </ul>
 </article> 
 
+<article class="slide slide-list">
+<h1>Basic Non-responsive Chop 101</h1>
+	<ul>
+		<li class="slide">
+			<h3>Relatively positioned header</h3>
+		</li>
+		<li class="slide">
+			<h3>Absolutely positioned top nav</h3>
+		</li>
+		<li class="slide">
+			<h3>Image replacement logo</h3>
+		</li>
+		<li class="slide">
+			<h3>Floated menu items</h3>
+		</li>
+		<li class="slide">
+			<h3>Floated body</h3>
+		</li>
+		<li class="slide">
+			<h3>Relatively positioned footer</h3>
+		</li>	
+	</ul>
+</article>
+
+
+<article class='slide slide-accent'>
+	<h1>Styles</h1>
+</article>
 
 <article class="slide slide-list">
 <h1>Style Properties</h1>
 <ul>
 <li class="slide">
-	<h3>color</h3>
+	<h3>color:</h3>
 </li>
 <li class="slide">
-	<h3>font (style, variant, weight, size, family)</h3>
+	<h3>background-color:</h3>
 </li>
 <li class="slide">
-	<h3>text-align</h3>
+	<h3>border-radius:</h3>
 </li>
 <li class="slide">
-	<h3>text-indent</h3>
+	<h3>font: style variant weight size family</h3>
 </li>
 <li class="slide">
-	<h3>text-decoration</h3>
+	<h3>text-align:</h3>
+</li>
+<li class="slide">
+	<h3>text-indent:</h3>
+</li>
+<li class="slide">
+	<h3>opacity:</h3>
 </li>
 <li class="slide">
 	<h3>line-height</h3>
@@ -366,16 +400,16 @@ p {
 	<li class='slide'>
 		<h3> Can “Cascade” styles with spaces between selectors</h3>
 			<ul>
-				<li>HTML<pre>&lt;div id='outer'&gt;&lt;p&gt; ... &lt;/p&gt;&lt;/div&gt;</pre>
-			 		CSS<pre><em>#outer p </em> { color:red; } /* only p's inside of outer */</pre>
+				<li>HTML<pre>&lt;nav id='top'&gt;&lt;p&gt; ... &lt;/p&gt;&lt;/nav&gt;</pre>
+			 		CSS<pre><em>#top p </em> { color:red; } /* only p's inside of outer */</pre>
 				</li>
 		 	</ul>
 	</li>
 	<li class='slide'>
 		<h3> Can select only "child" styles with &gt; signs</h3>
 			<ul>
-				<li>HTML<pre>&lt;div id='outer'&gt;&lt;div&gt;&lt;div&gt; ... &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
-					CSS<pre><em>#outer > div </em> { background-color:red; } /* only div's that are direct children of outer */</pre>
+				<li>HTML<pre>&lt;nav id='outer'&gt;&lt;ul&gt;&lt;li&gt; ... &lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</pre>
+					CSS<pre><em>#outer > ul </em> { background-color:red; } /* only ul's that are direct children of outer */</pre>
 				</li>
 		 	</ul>
 	</li>
@@ -759,6 +793,177 @@ p {
 <article class='slide slide-accent'>
 	<h1>Making it Move</h1>
 </article>
+
+<article class="slide slide-list">
+	<h1>CSS3 Properties</h1>
+	<ol>
+		<li class='slide'>
+      <h3>border-radius</h3>
+		</li>	
+		<li class="slide">
+      <h3>box-shadow</h3>
+		</li>
+		<li class="slide">
+      <h3>text-shadow</h3>
+		</li>
+		<li class="slide">
+    <h3><a href='http://www.html5rocks.com/en/tutorials/flexbox/quick/'>flexbox</a></h3>
+		</li>
+		<li class="slide">
+    <h3>rgba</h3>
+		</li>
+		<li class="slide">
+    <h3><a href='http://www.colorzilla.com/gradient-editor/'>background gradients</a></h3>
+		</li>
+	</ol>	
+</article>	
+
+
+<article class='slide slide-subhead'>
+  <h1>Let's make a polaroid</h1>
+  <img src='images/polaroid.jpg'/>
+
+</article>
+
+<article class='slide slide-list'>
+  <h1>Let's make a polaroid</h1>
+  <p>Let's make a polaroid (<a href='http://www.flickr.com/photos/snowpeak/4152675183/'>Image Source</a>)</p>
+  <textarea class='coder-editor coder-editor-instant'>
+<style>
+  .container { text-align:center; padding-top:30px;}
+  .polaroid {
+    display:inline-block;
+    width: 282px;
+    font-size:1.2em;
+    color:#444;
+    font-family:times;
+    font-weight:bold;
+  }
+</style>
+<div class='container'>
+  <div class='polaroid'>
+   <img src='images/birds.jpg'>
+    Those are some crazy birds!
+  </div>
+</div>
+
+  </textarea>
+<script type='coder-solution'>
+<style>
+  .container { text-align:center; padding-top:30px;}
+  .polaroid {
+    display:inline-block;
+    width: 282px;
+    border:1px solid #eee;
+    border-radius:4px;
+    padding:10px 10px 30px 10px;
+    box-shadow:5px 5px 10px #CCC;
+    -webkit-transform:rotate(15deg);
+    font-size:1.3em;
+    color:#444;
+    background-color:#f3f3f3;
+    font-family: Chalkboard, cursive;
+    font-style:italic;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-shadow:1px 1px #fff;
+  }
+  img { margin-bottom:10px; }
+  
+</style>
+<div class='container'>
+  <div class='polaroid'>
+   <img src='images/birds.jpg'>
+    Those are some <br/>crazy birds!
+  </div>
+</div>
+
+</script>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>CSS Transitions Example</h2>
+<a href='http://css3.bradshawenterprises.com/all/'>More Examples</a>
+<textarea class='coder-editor'>
+<style>
+  #box {
+    transition: background-color 2s;
+    -moz-transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+    -ms-transition: background-clor 2s;
+    -o-transition: background-color 2s;
+    width:50px;
+    height:50px;
+    background-color:green;
+  }
+
+  #box:hover {
+    background-color:red;
+
+  }
+</style>
+<div id='box'></div>
+
+</textarea>
+</article>
+
+<article class='slide slide-list'>
+  <h2>CSS3 Animations</h2>
+  <ul>
+  	<li class="slide">
+  		<h3>Are defined with keyframes</h3>
+  	</li>
+  	<li class="slide">
+  		<h3>Have a name</h3>
+  	</li>
+  	<li class="slide">
+  		<h3>Can have a number of other properties including direction, repeat, duration</h3>
+  	</li>
+  	<li class="slide">
+    <h3><a href='http://www.w3.org/TR/css3-animations/'>See the spec</a></h3>
+  	</li>
+  </ul>
+</article>
+
+<article class='slide slide-list'>
+  <h2>CSS3 Animations Example</h2>
+  <p>You'll need all your prefixes here! (-webkit, -moz, -ms) - only showing webkit for brevity</p>
+<textarea class='coder-editor'>
+<style>
+
+  @-webkit-keyframes coloranim {
+    0% {
+      background-color:green;
+    }
+    50% {
+      background-color:red;
+    }
+    100% {
+      background-color:blue;
+    }
+  }
+
+  #box:hover { 
+    -webkit-animation-name:none;
+  }
+
+  #box {
+    background-color:black;
+    width:50px;
+    height:50px;
+    -webkit-animation-name: coloranim;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: 4;
+    -webkit-animation-direction:alternate;
+    -webkit-animation-timing-function: ease-in-out;
+  }
+</style>
+<div id='box'></div>
+</textarea>
+</article>
+
+
 
 
 
