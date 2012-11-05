@@ -253,6 +253,22 @@ $gray-color:#CCC;
 		color:$callout-color;
 	}
 	
+	.slide-background-content-footer {
+   	 	background-repeat:no-repeat; 
+   	 	.background-wrapper {
+            position:absolute;
+            bottom:0px;
+            width:100%;
+            height:20px;
+   	    	background-color: rgba(0, 0, 0, 0.7);  padding:20px 0px;
+   	
+   	 		h1 {
+   	    		font-size:18px;
+   	    		a { color:white; }
+   	   			}	
+   		}
+	}
+	
 	.deck-prev-link, .deck-next-link {
 		background:$callout-color;
 		font-family:serif; // sans-serif arrows x-browser fail
