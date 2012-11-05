@@ -268,7 +268,10 @@ $gray-color:#CCC;
    	   			}	
    		}
 	}
-	
+	.slide-statement {
+		h1 { font-size:2.5em; @include serif-font;  color:$callout-color; text-transform:none; }
+		p {text-align:center; font-size:2em;}
+	}
 	.deck-prev-link, .deck-next-link {
 		background:$callout-color;
 		font-family:serif; // sans-serif arrows x-browser fail

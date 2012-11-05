@@ -340,6 +340,16 @@
         font-size: 18px; }
         .deck-container .slide-background-content-footer .background-wrapper h1 a {
           color: white; }
+  .deck-container .slide-statement h1 {
+    font-size: 2.5em;
+    font-family: Georgia, serif;
+    font-weight: normal;
+    text-transform: none;
+    color: #2ca58f;
+    text-transform: none; }
+  .deck-container .slide-statement p {
+    text-align: center;
+    font-size: 2em; }
   .deck-container .deck-prev-link, .deck-container .deck-next-link {
     background: #2ca58f;
     font-family: serif; }
