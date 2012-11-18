@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>A Web of Typographic Love</title>
+	<title>Responsive FTW!</title>
 	<meta name="viewport" content="width=1024">
 	
 	<!-- Replace path with correct path to deck.core.css. -->
@@ -34,6 +34,7 @@
 	  <html>
 	    <head>
 	      <script src='src/jquery.min.js'>SCRIPTEND
+	<link rel="stylesheet" href="reset.css">
 	    </head>
 	    <body>
 		    CODE
@@ -478,31 +479,6 @@ function shuffleHomework(amt) {
 </article>
 
 
-
-<article class='slide slide-list' >
-<h2>Max-Width is our friend</h2>
-<p>Well, not ie6's friend - use a condition include and target width:100% instead</p>
-<textarea class='coder-editor coder-editor-full' >
-<style>
-  #wrapper { width:100%; margin:0 auto; max-width:1024px; }
-  #content { width:80%; margin:0 auto; padding:30px 0px; }
-  img { max-width:100%; }
-</style>
-<div id='wrapper'>
-  <section id='content'>
-    <img src='http://placekitten.com/600/400'/>
-  </section>
-</div>
-
-<style>
-  /* Dummy Styles */
-  #wrapper { background-color:lightgray; padding:20px 0px; }
-  #content { background-color:black; color:white; min-height:300px; }
-  #sidebar { background-color:darkgray; color:white; min-height:300px; }
-</style>
-</textarea>
-</article>
-
 <article class="slide slide-statement">
 	<h1>Sizing text and setting in em's</h1>
 </article>
@@ -520,7 +496,7 @@ function shuffleHomework(amt) {
 </article>
 
 
-<article class='slide slide-list' >
+<article class='slide slide-list' data-coder-template="coderdeck-plain">
 <h1>Reseting the font size</h1>
 <p>16px is the normal 100% default (from our reset)</p>
 <textarea class='coder-editor coder-editor-full'>
@@ -529,7 +505,7 @@ function shuffleHomework(amt) {
 </textarea>
 </article>
 
-<article class='slide slide-list' >
+<article class='slide slide-list' data-coder-template="coderdeck-plain">
 <h2>adjusting in em's (target &divide; context = result)</h2>
 <textarea class='coder-editor coder-editor-full'>
 <style>
