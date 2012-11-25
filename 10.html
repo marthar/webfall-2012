@@ -387,42 +387,6 @@ document.write("Let's write some HTML right here!");
 </article>
 
 
-<article class='slide slide-list'>
-<h2>Using jQuery</h2>
-<p>Since we often include Javscript in the head of the document, we need to make sure we wait until the
-page is loaded before we use it. We can use the jQuery bind function to load stuff at the appropriate point.   </p>
-<pre class='prettyprint'>
-&lt;script&gt;
-$(document).bind("ready",function() {
-  // Dom Loaded
-});
-&lt;/script&gt;
-</pre>
-</article>
-
-
-<article class='slide slide-list'>
-<h2>Why this is important..</h2>
-<textarea class='coder-editor'>
-<script>
-  $("#header").html("Modified Header");
-</script>
-<h2 id='header'>A Header</h2>
-</textarea>
-</article>
-
-<article class='slide slide-list'>
-<h2>Shorthand </h2>
-<p>Since this is so common, we can use a shorthand for this of $(function() { }) ... </p>
-<pre class='prettyprint'>
-&lt;script&gt;
-$(function() {
-  // Dom Loaded
-});
-&lt;/script&gt;
-</pre>
-</article>
-
  
 <article class='slide slide-list'>
 <h2>Plugins: Barebones</h2>
