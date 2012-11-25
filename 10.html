@@ -96,23 +96,35 @@
 <h1>Order of Business</h1>
 	<ol>
 		<li class="slide">
-			<h3>Site Reviews</h3>
+			<h3>Review Homework</h3>
 		</li>
 		<li class="slide">
-			<h3>Responsive Design</h3>
+			<h3>Intro to JavaScript</h3>
 		</li>
 		<li class="slide">
-			<h3>Flexible Grids</h3>
+			<h3>jQuery Basics</h3>
 		</li>
 		<li class="slide">
-			<h3>Flexible Images</h3>
+			<h3>Hover Nav</h3>
 		</li>
 		<li class="slide">
-			<h3>Media Queries</h3>
+			<h3>Sticky Nav</h3>
 		</li>
 		<li class="slide">
-			<h3>Exercises</h3>
+			<h3>Lightbox</h3>
 		</li>
+		<li class="slide">
+			<h3>Sliders</h3>
+		</li>
+		<li class="slide">
+			<h3>Hosting and Uploading your own site</h3>
+		</li>
+		<li class="slide">
+			<h3>Basic Contact Form</h3>
+		</li>
+		<li class="slide">
+			<h3>Pulling a Twitter Feed</h3>
+		</li>		
 	</ol>
 </article>
 
@@ -205,6 +217,56 @@ function shuffleHomework(amt) {
 <article class='slide slide-subhead'>
 <h1>We'll do our best..</h1>
 <h2>But you're not going to learn it in a day. It take a lot longer than that...</h2>
+</article>
+
+<article class='slide slide-list'>
+  <h2>About Javascript</h2>
+  <ul>
+    <li class='slide'/><h3>First created in '96</h3></li>
+    <li class='slide'/><h3>Nothing, whatsoever to do with Java. </h3></li>
+    <li class='slide'/><h3>People hated it for a long time. Now people love it.</h3></li>
+    <li class='slide'/><h3>Now can be used for:</h3>
+      <ul>
+        <li class='slide'/><h4>Client Side</h4></li>
+        <li class='slide'/><h4>Server Side</h4></li>
+        <li class='slide'/><h4>Mobile (iPhone, Android)</h4></li>
+        <li class='slide'/><h4>Desktop</h4></li>
+      </ul>
+    </li>
+  </ul>
+</article>
+
+<article class='slide slide-list'>
+<h2>Javascript is both:</h2>
+   <ul>
+   	<li class='slide'>
+   		<h3>The worlds most popular language (beat Visual Basic)</h3>
+   	</li>
+   	<li class='slide'>
+   		<h3>The world's most unpopular language (people love to complain about it)</h3>
+   	</li>
+   </ul>
+</article>
+
+<article class='slide slide-list'>
+    <h2>Why so much hate for JavaScript?</h2>
+    <ul>
+      <li class='slide'/><h3>Incompatible Implementations</h3></li>
+      <li class='slide'/><h3>OO, but not a classical inheritance</h3></li>
+      <li class='slide'/><h3>Initial Implementation were slow</h3></li>
+      <li class='slide'/><h3>It looked like a silly toy next to Flash</h3></li>
+      <li class='slide'/><h3>No AJAX to start with (while Flash did)</h3></li>
+    </ul>
+</article>
+
+<article class='slide slide-list'>
+  <h2>What Changed?</h2>
+  <ul>
+    <li class='slide'/><h3>The "Gmail" and "Goole Maps Era" (2004-2005)</h3><a href="http://maps.google.com/">Google Maps</a></li>
+    <li class='slide'/><h3>"Framework Era" (2005-Today) <a href='http://jquery.com/'>jQuery</a></h3></li>
+    <li class='slide'/><h3><a href='http://news.cnet.com/8301-1001_3-10030888-92.html'>"Chrome Era" (2008-Today)</a></h3></li>
+	<li class='slide'/><h3>The "javascript MVC era" (2010-Today) <a href="http://alpha.salon.io/#/home">salon.io</a></h3></li>
+  </ul>
 </article>
 
 <article class='slide slide-list'>
@@ -339,6 +401,28 @@ $(document).bind("ready",function() {
 </article>
 
 
+<article class='slide slide-list'>
+<h2>Why this is important..</h2>
+<textarea class='coder-editor'>
+<script>
+  $("#header").html("Modified Header");
+</script>
+<h2 id='header'>A Header</h2>
+</textarea>
+</article>
+
+<article class='slide slide-list'>
+<h2>Shorthand </h2>
+<p>Since this is so common, we can use a shorthand for this of $(function() { }) ... </p>
+<pre class='prettyprint'>
+&lt;script&gt;
+$(function() {
+  // Dom Loaded
+});
+&lt;/script&gt;
+</pre>
+</article>
+
  
 <article class='slide slide-list'>
 <h2>Plugins: Barebones</h2>
@@ -401,6 +485,240 @@ $(document).bind("ready",function() {
       });     </script>
   </body>
 </textarea>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Basic Navbar</h2>
+<textarea class='coder-editor coder-editor-full'>
+<style>
+
+#menu {  
+    list-style:none;  
+    width:940px;  
+    margin:30px auto 0px auto;  
+    height:43px;  
+    padding:0px 20px 0px 20px;  
+}
+
+#menu li {  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 6px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+#menu li:hover {  
+    border: 1px solid #E0E0E0;  
+    background: #F4F4F4;  
+
+}
+
+#menu li a {  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size:14px;  
+    color: gray;  
+    display:block;  
+    outline:0;  
+    text-decoration:none;  
+}
+
+#menu li ul {
+	display:none;
+	position:absolute;
+	top:20px;
+}
+
+</style>
+
+<ul id="menu">  
+    <li><a href="#">Home</a></li>  
+    <li><a href="#">About</a></li>  
+    <li><a href="#">Portfolio</a> 
+ 		<ul>
+		   <li><a href="#">Print</a></li>  
+		   <li><a href="#">Photography</a></li>  
+		   <li><a href="#">Web</a></li>
+		</ul></li>
+    <li><a href="#">Contact</a></li>  
+</ul>
+</textarea>
+</article>
+
+<article class='slide slide-subhead'>
+<h1>Rollover Navs</h1>
+<h2>pure CSS</h2>
+</article>
+
+<article class='slide slide-list'>
+<h2>Drop-Down</h2>
+<p>Adding :hover selector</p>
+<textarea class='coder-editor coder-editor-full'>
+<style>
+
+
+#menu {  
+    list-style:none;  
+    width:940px;  
+    margin:30px auto 0px auto;  
+    height:43px;  
+    padding:0px 20px 0px 20px;  
+}
+
+#menu li {  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 6px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+#menu li:hover {  
+    border: 1px solid #E0E0E0;  
+    background: #F4F4F4;  
+
+}
+
+
+#menu li a {  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size:14px;  
+    color: gray;  
+    display:block;  
+    outline:0;  
+    text-decoration:none;  
+}
+
+#menu li ul {
+	display:none;
+	position:absolute;
+	top:30px;
+	left:-41px;
+}
+
+#menu li:hover ul {
+	display:block;
+	
+}
+
+#menu li ul li{  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 4px 17px 4px 17px;  
+    margin-right:10px;  
+    margin-top:7px;  
+    border: 1px solid white;  
+}
+
+</style>
+
+<ul id="menu">  
+    <li><a href="#">Home</a></li>  
+    <li><a href="#">About</a></li>  
+    <li><a href="#">Portfolio</a> 
+ 		<ul>
+		   <li><a href="#">Print</a></li>  
+		   <li><a href="#">Photography</a></li>  
+		   <li><a href="#">Web</a></li>
+		</ul></li>
+    <li><a href="#">Contact</a></li>  
+</ul>
+
+</textarea>
+</article>
+
+<article class='slide slide-subhead'>
+<h1>Drop-Down Navs</h1>
+<h2>add a few line of javascript</h2>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>Click Drop-Down</h2>
+<textarea class='coder-editor coder-editor-full'>
+
+<div id='dropdowns'>
+<h3><a href="#">Section 1</a></h3>
+  <div>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+
+<h3><a href="#">Section 2</a></h3>
+  <div>
+   <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+
+<h3><a href="#">Section 3</a></h3>
+  <div>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+
+<h3><a href="#">Section 4</a></h3>
+  <div>
+    <ul>
+      <li>List item one</li>
+      <li>List item two</li>
+      <li>List item three</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  $(function() {
+      $("#dropdowns > div").hide();
+      $("#dropdowns h3").click(function() {
+        $("#dropdowns > div:visible").slideUp();
+        $(this).next().slideDown();
+       });
+   });
+</script>
+<style>
+
+  body { width:300px; marging: 0 auto; color:gray; font-family:Georgia, serif;}
+
+  p { padding-top:7px;}
+
+  h3 { 
+    margin-top:30px;
+    background-color:#dddddd;
+    padding:3px;
+    line-height:1.2em;
+}
+  h3 a { 
+    text-decoration:none;
+    color:gray;
+    font-weight:bold
+  }
+
+</style>
+
+
+</textarea>
+</article>
+
+<article class='slide slide-statement'>
+<h1><a href="http://docs.jquery.com/UI/Accordion">jQuery Accordian</a></h1>
 </article>
 
 <article class='slide slide-list'>
@@ -489,6 +807,230 @@ $(document).bind("ready",function() {
 </textarea>
 </article>
 
+<article class='slide slide-list'>
+<h2>Sticky Navbar</h2>
+<textarea class='coder-editor coder-editor-full' data-coder-template='coderdeck-plain'>
+<style>	
+<style>	
+#header-wrapper {	
+}
+
+header {
+	position:relative;
+    background-color:white;
+}
+
+header h1 { 
+	float:left;
+	font-size:50px;
+	font-weight:bold;
+	color:teal;	
+	margin-right:20px;
+	margin-top:30px;
+}
+
+#menu { float:left;}
+
+#menu ul {  
+    list-style:none;  
+    width:650px;  
+    margin:30px auto 0px auto;  
+    height:43px;  
+	margin-top:50px;
+    padding:0px 20px 0px 20px;  
+}
+
+
+#menu li {  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 6px 15px;  
+    margin-right:50px;  
+    border: 1px solid white;  
+}
+
+#menu li:hover {  
+    border: 1px solid #E0E0E0;  
+    background: #F4F4F4;  
+
+}
+
+
+#menu li a {  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size:14px;  
+    color: gray;  
+    display:block;  
+    outline:0;  
+    text-decoration:none;  
+}
+
+#menu li ul {
+	display:none;
+	position:absolute;
+	top:20px;
+}
+
+#main-content {
+	clear:both;
+	width:400px;
+	}
+
+#main-content p { font-size:16px;
+	font-weight:normal;
+	padding-top:20px;
+	line-height:1.5em;
+	}
+	
+#main-content h1 {
+	color:teal;
+	padding-top:100px;
+	font-size:30px;
+}
+</style>
+
+<div id='header-wrapper'>
+<header>
+	<h1>MY PAGE</h1>
+	<nav id="menu">
+	  <ul>  
+	    <li><a href="#home">Home</a></li>  
+	    <li><a href="#about">About</a></li>  
+	    <li><a href="#portfolio">Portfolio</a></li>
+	    <li><a href="#contact">Contact</a></li>  
+	 </ul>
+	</nav>
+</header>
+</div>
+<section id="main-content">
+	<h1 id="home">Bacon Ipsum</h1>
+	<p>	Brisket chuck leberkas short ribs tenderloin tongue. Filet mignon sirloin jerky chicken strip steak t-bone. Ribeye short ribs fatback pancetta ham boudin, pork biltong tenderloin leberkas ball tip pork chop bresaola. Spare ribs kielbasa pork loin hamburger pork chop rump beef. Chuck spare ribs pork chop shank ribeye, leberkas turkey pig. Tri-tip tongue turducken, pig jowl brisket tail tenderloin flank rump bresaola pork chop short loin shoulder.</p>
+	<h1 id="about">About</h1>
+	<p>T-bone strip steak beef ribs, tenderloin drumstick pancetta biltong sirloin jowl speck kielbasa ball tip. Filet mignon leberkas jerky, cow shankle spare ribs fatback venison tri-tip short ribs kielbasa brisket. Swine pork loin beef kielbasa, prosciutto boudin beef ribs hamburger pork chop short ribs meatloaf frankfurter bresaola. Chuck kielbasa tail boudin.</p>	
+	<h1 id="portfolio">Portfolio</h1>	
+	<p>Ball tip swine salami, strip steak boudin chicken fatback. Kielbasa bresaola ribeye swine speck pork belly. T-bone chuck turducken, tail pig ball tip kielbasa. Ribeye kielbasa tenderloin spare ribs, turducken beef ribs prosciutto drumstick brisket pastrami strip steak. Jerky salami biltong chicken, ground round pig pork chop meatball pork corned beef pastrami turducken shoulder.</p>
+
+		<p>Ball tip capicola chuck kielbasa prosciutto chicken. Meatloaf meatball corned beef pork belly, andouille frankfurter salami ground round biltong rump spare ribs. Capicola tail boudin, turducken pork belly ribeye bresaola bacon t-bone ball tip. Ribeye frankfurter spare ribs, ground round pork loin tail rump salami speck sirloin pastrami shank.</p>
+	<h1 id="contact">Contact</h1>
+		<p>Ham hamburger capicola short loin pork loin kielbasa. Meatball biltong tri-tip pork belly speck pork loin, shankle bacon. Bacon frankfurter prosciutto, ribeye tri-tip jowl beef pork chop kielbasa bresaola t-bone pig shank short loin. Jerky brisket pork chop jowl.</p>
+</section>	
+
+</textarea>
+<script type='coder-solution'>
+<style>	
+#header-wrapper {
+	height:80px;
+	
+}
+
+header {
+	position:fixed;
+    background-color:white;
+}
+
+header h1 { 
+	float:left;
+	font-size:50px;
+	font-weight:bold;
+	color:teal;	
+	margin-right:20px;
+	margin-top:30px;
+}
+
+#menu { float:left;}
+
+#menu ul {  
+    list-style:none;  
+    width:650px;  
+    margin:30px auto 0px auto;  
+    height:43px;  
+	margin-top:50px;
+    padding:0px 20px 0px 20px;  
+}
+
+
+#menu li {  
+    float:left;  
+    display:block;  
+    text-align:center;  
+    position:relative;  
+    padding: 6px 15px;  
+    margin-right:50px;  
+    border: 1px solid white;  
+}
+
+#menu li:hover {  
+    border: 1px solid #E0E0E0;  
+    background: #F4F4F4;  
+
+}
+
+
+#menu li a {  
+    font-family:Arial, Helvetica, sans-serif;  
+    font-size:14px;  
+    color: gray;  
+    display:block;  
+    outline:0;  
+    text-decoration:none;  
+}
+
+#menu li ul {
+	display:none;
+	position:absolute;
+	top:20px;
+}
+
+#main-content {
+	clear:both;
+	width:400px;
+	}
+
+#main-content p { font-size:16px;
+	font-weight:normal;
+	padding-top:20px;
+	line-height:1.5em;
+	}
+	
+#main-content h1 {
+	color:teal;
+	padding-top:100px;
+	font-size:30px;
+}
+</style>
+
+<div id='header-wrapper'>
+<header>
+	<h1>MY PAGE</h1>
+	<nav id="menu">
+	  <ul>  
+	    <li><a href="#home">Home</a></li>  
+	    <li><a href="#about">About</a></li>  
+	    <li><a href="#portfolio">Portfolio</a></li>
+	    <li><a href="#contact">Contact</a></li>  
+	 </ul>
+	</nav>
+</header>
+</div>
+<section id="main-content">
+	<h1 id="home">Bacon Ipsum</h1>
+	<p>	Brisket chuck leberkas short ribs tenderloin tongue. Filet mignon sirloin jerky chicken strip steak t-bone. Ribeye short ribs fatback pancetta ham boudin, pork biltong tenderloin leberkas ball tip pork chop bresaola. Spare ribs kielbasa pork loin hamburger pork chop rump beef. Chuck spare ribs pork chop shank ribeye, leberkas turkey pig. Tri-tip tongue turducken, pig jowl brisket tail tenderloin flank rump bresaola pork chop short loin shoulder.</p>
+	<h1 id="about">About</h1>
+	<p>T-bone strip steak beef ribs, tenderloin drumstick pancetta biltong sirloin jowl speck kielbasa ball tip. Filet mignon leberkas jerky, cow shankle spare ribs fatback venison tri-tip short ribs kielbasa brisket. Swine pork loin beef kielbasa, prosciutto boudin beef ribs hamburger pork chop short ribs meatloaf frankfurter bresaola. Chuck kielbasa tail boudin.</p>	
+	<h1 id="portfolio">Portfolio</h1>	
+	<p>Ball tip swine salami, strip steak boudin chicken fatback. Kielbasa bresaola ribeye swine speck pork belly. T-bone chuck turducken, tail pig ball tip kielbasa. Ribeye kielbasa tenderloin spare ribs, turducken beef ribs prosciutto drumstick brisket pastrami strip steak. Jerky salami biltong chicken, ground round pig pork chop meatball pork corned beef pastrami turducken shoulder.</p>
+
+		<p>Ball tip capicola chuck kielbasa prosciutto chicken. Meatloaf meatball corned beef pork belly, andouille frankfurter salami ground round biltong rump spare ribs. Capicola tail boudin, turducken pork belly ribeye bresaola bacon t-bone ball tip. Ribeye frankfurter spare ribs, ground round pork loin tail rump salami speck sirloin pastrami shank.</p>
+	<h1 id="contact">Contact</h1>
+		<p>Ham hamburger capicola short loin pork loin kielbasa. Meatball biltong tri-tip pork belly speck pork loin, shankle bacon. Bacon frankfurter prosciutto, ribeye tri-tip jowl beef pork chop kielbasa bresaola t-bone pig shank short loin. Jerky brisket pork chop jowl.</p>
+</section>	
+
+</script>
+
+</article>
+
 <article class='slide slide-statement'>
 <h1><a href="http://fancybox.net/">jQuery LightBox</a></h1>
 </article>
@@ -500,35 +1042,169 @@ $(document).bind("ready",function() {
 
 
 
-<article class='slide slide-homework'>
-<h2>Homework</h2>
-	<h3 class='slide'>Reading</h3>
-	<ul class='slide'>	
-			<li>
-                <h3><a href='http://www.alistapart.com/articles/responsive-web-design/'>Responsive Web Design</a>
-				</h3>
-			</li>
-			<li>
-	            <h3><a href='http://www.alistapart.com/articles/fluid-images/'>Fluid Images</a>
-				</h3>			
-			</li>
-			</ul>
-	
-	<h3 class='slide'>Design</h3>
-       <ul class='slide'>
-			<li>
-                <h3>Take your cat vs dog design and make it responsive.
- 			    </h3>
-			</li>
-			<li>
-	           <h3>Write and Validate the HTML for Homepage and 1 interior page of your final project 
-	 		   </h3>
-			</li>
-		</ul>
-</ul>	
+<article class='slide slide-subhead'>
+	<h1>Hosting &amp; FTPing your website</h1>
+	<h2>quick and cheap</h2>
+</article>
+
+<article class='slide slide-statement'>
+	<h1><a href='http://dreamhost.com/'>DreamHost</a><h1>
+</article>	
+
+<article class='slide slide-statement'>
+<h1><a href='http://fetchsoftworks.com/'>Fetch FTP</a><h1>
 </article>
 
 
+
+
+<article class='slide slide-subhead'>
+<h1>Twitter Feeds</h1>
+<h2>pull a twitter feed</h2>
+</article>
+
+
+<article class='slide slide-statement'>
+	<h1><a href="http://twitter.com/about/resources/widgets">Pulling Your Twitter Feed</a></h1>
+</article>
+
+<article class='slide slide-list'>
+<h2>Twitter Feed</h2>
+<p>paste your code here</p>
+<textarea class='coder-editor coder-editor-full' >
+
+
+
+
+
+
+
+
+</textarea>
+</article>
+
+
+<article class='slide slide-subhead'>
+<h1>Forms</h1>
+<h2>a basic contact form</h2>
+</article>
+
+
+<article class='slide slide-list'>
+<h2>HTML5 Form</h2>
+<textarea class='coder-editor coder-editor-full' >
+ <div id="contact-form">    
+
+<form id="contact" method="post" action="somewhere.php">
+<fieldset>    
+
+	<label for="name">Name</label>
+	<input type="text" name="contact[name]" placeholder="Full Name">
+
+	<label for="email">E-mail</label>
+	<input type="email" name="contact[email]" placeholder="name@domain.com">
+
+	<label for="phone">Message</label>
+	<textarea name="contact[message]" placeholder="enter your message">&lt/textarea>
+
+
+<input type="submit" name="submit" id="submit" value="Send Message" />
+
+</fieldset>
+</form>
+
+</div>
+<style>
+label {display:block;}
+input, textarea { display:block;}
+</style>
+</textarea>
+</article>
+
+<article class='slide slide-list'>
+  <h2>What does somewhere.php do?</h2>
+  <p>Well, we haven't covered PHP, but here's a example..</p>
+<pre class='prettyprint'>
+&lt;?php
+if($_REQUEST['contact']) {
+
+  $content = "Contact Details:\n";
+  foreach($_REQUEST['contact'] as $key => $value) {
+     $content .= "$key: $value\n";
+  }
+  mail ("myemail@domain.com","Form Submission!",$content);
+  
+  header('Location: contact.html');
+  exit(0);
+}
+?>
+&lt;!DOCTYPE HTML>
+&lt;html lang="en">
+  &lt;head>&lt;/head>
+  &lt;body>
+    No Contact Request Received
+  &lt;/body>
+&lt;/html>
+</pre>
+</article>
+
+<article class='slide slide-subhead'>
+<h1><a href="http://tympanus.net/Development/3DGallery/">3D Gallery with CSS &amp; jQuery</a></h2>
+</article>
+
+<article class='slide slide-subhead'>
+<h1><a href="http://tympanus.net/Development/ParallaxContentSlider/index3.html">Parallax Slider</a></h2>
+</article>
+
+<article class='slide slide-subhead'>
+<h1><a href="http://css-tricks.com/snippets/jquery/smooth-scrolling/">Smooth Schrolling</a></h2>
+</article>
+
+
+<article class='slide slide-subhead'>
+<h1>Useful Tricks
+<h3>
+	<ul>
+		<li><a href="http://css-tricks.com/keep-margins-out-of-link-lists/">Keep Margins out of Link Lists</a></li>
+		<li><a href="http://css-tricks.com/perfect-full-page-background-image/">Perfect Full Page Background Image</a></li>
+		<li><a href="http://css-tricks.com/snippets/css/slide-in-image-boxes/">Slide In Image Boxes</a></li>
+		<li><a href="http://tympanus.net/Development/ParallaxContentSlider/index3.html">Styling Text Inputs</a></li>
+		<li><a href="http://sublimeorange.com/uncategorized/css3-speech-bubble/l">CSS3 Speech Bubble</a></li>
+		<li><a href="http://css-tricks.com/snippets/jquery/make-entire-div-clickable/">Make Entire Div Clickable</a></li>
+		<li><a href="http://css-tricks.com/snippets/css/sticky-footer/">Sticky Footer #2</a></li>
+	</ul>	
+</article>
+
+
+
+
+
+
+<article class='slide slide-homework'>
+<h2>Homework</h2>
+
+		<h3 class='slide'>Coding</h3>
+		<ul class='slide'>	
+			<li><h3>Go through both the beginner and intermediate courses on codecademy</h3>                   
+			<li><h3><a href='http://www.codecademy.com/courses/programming-intro'>Beginning Programming</a></h3></li> 
+            <li><h3><a href='http://www.codecademy.com/courses/jquery-and-the-dom'>jQuery and the DOM</a> </h3></li>
+            <li><h3><a href='http://www.codecademy.com/courses/functions_in_javascript'>Functions in Javascript</a></h3></li>
+				</ul>
+
+		<h3 class='slide'>Design</h3>
+	       <ul class='slide'>
+				<li>
+	                <h3>Finish Your Homework Assignments- update your homework sheets
+	 			    </h3>
+				</li>
+				<li>
+		           <h3>2 Weeks left to work on your final project!! 
+		 		   </h3>
+				</li>
+			</ul>
+	
+	
+</article>
 
 
 <!-- Update these paths to point to the correct files. -->
