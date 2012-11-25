@@ -427,7 +427,7 @@ document.write("Let's write some HTML right here!");
     <!-- We include jquery -->
     <script src='src/jquery.min.js'></script>
     <!-- We include the plugin -->
-    <script src='src/jquery.cycle.all.js'></script>
+    <script src='sr/jquery.cycle.all.js'></script>
 
     <style>
        /* #slideshow img { border:1px solid black; padding:10px; border-radius:10px; } */
@@ -456,242 +456,11 @@ document.write("Let's write some HTML right here!");
 </article>
 
 
-<article class='slide slide-list'>
-<h2>Basic Navbar</h2>
-<textarea class='coder-editor coder-editor-full'>
-<style>
-
-#menu {  
-    list-style:none;  
-    width:940px;  
-    margin:30px auto 0px auto;  
-    height:43px;  
-    padding:0px 20px 0px 20px;  
-}
-
-#menu li {  
-    float:left;  
-    display:block;  
-    text-align:center;  
-    position:relative;  
-    padding: 6px 17px;  
-    margin-right:10px;  
-    margin-top:7px;  
-    border: 1px solid white;  
-}
-
-#menu li:hover {  
-    border: 1px solid #E0E0E0;  
-    background: #F4F4F4;  
-
-}
-
-#menu li a {  
-    font-family:Arial, Helvetica, sans-serif;  
-    font-size:14px;  
-    color: gray;  
-    display:block;  
-    outline:0;  
-    text-decoration:none;  
-}
-
-#menu li ul {
-	display:none;
-	position:absolute;
-	top:20px;
-}
-
-</style>
-
-<ul id="menu">  
-    <li><a href="#">Home</a></li>  
-    <li><a href="#">About</a></li>  
-    <li><a href="#">Portfolio</a> 
- 		<ul>
-		   <li><a href="#">Print</a></li>  
-		   <li><a href="#">Photography</a></li>  
-		   <li><a href="#">Web</a></li>
-		</ul></li>
-    <li><a href="#">Contact</a></li>  
-</ul>
-</textarea>
-</article>
-
-<article class='slide slide-subhead'>
-<h1>Rollover Navs</h1>
-<h2>pure CSS</h2>
-</article>
-
-<article class='slide slide-list'>
-<h2>Drop-Down</h2>
-<p>Adding :hover selector</p>
-<textarea class='coder-editor coder-editor-full'>
-<style>
-
-
-#menu {  
-    list-style:none;  
-    width:940px;  
-    margin:30px auto 0px auto;  
-    height:43px;  
-    padding:0px 20px 0px 20px;  
-}
-
-#menu li {  
-    float:left;  
-    display:block;  
-    text-align:center;  
-    position:relative;  
-    padding: 6px 17px;  
-    margin-right:10px;  
-    margin-top:7px;  
-    border: 1px solid white;  
-}
-
-#menu li:hover {  
-    border: 1px solid #E0E0E0;  
-    background: #F4F4F4;  
-
-}
-
-
-#menu li a {  
-    font-family:Arial, Helvetica, sans-serif;  
-    font-size:14px;  
-    color: gray;  
-    display:block;  
-    outline:0;  
-    text-decoration:none;  
-}
-
-#menu li ul {
-	display:none;
-	position:absolute;
-	top:30px;
-	left:-41px;
-}
-
-#menu li:hover ul {
-	display:block;
-	
-}
-
-#menu li ul li{  
-    float:left;  
-    display:block;  
-    text-align:center;  
-    position:relative;  
-    padding: 4px 17px 4px 17px;  
-    margin-right:10px;  
-    margin-top:7px;  
-    border: 1px solid white;  
-}
-
-</style>
-
-<ul id="menu">  
-    <li><a href="#">Home</a></li>  
-    <li><a href="#">About</a></li>  
-    <li><a href="#">Portfolio</a> 
- 		<ul>
-		   <li><a href="#">Print</a></li>  
-		   <li><a href="#">Photography</a></li>  
-		   <li><a href="#">Web</a></li>
-		</ul></li>
-    <li><a href="#">Contact</a></li>  
-</ul>
-
-</textarea>
-</article>
-
-<article class='slide slide-subhead'>
-<h1>Drop-Down Navs</h1>
-<h2>add a few line of javascript</h2>
-</article>
 
 
 <article class='slide slide-list'>
 <h2>Click Drop-Down</h2>
-<textarea class='coder-editor coder-editor-full'>
-
-<div id='dropdowns'>
-<h3><a href="#">Section 1</a></h3>
-  <div>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
-
-<h3><a href="#">Section 2</a></h3>
-  <div>
-   <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
-
-<h3><a href="#">Section 3</a></h3>
-  <div>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
-
-<h3><a href="#">Section 4</a></h3>
-  <div>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
-</div>
-
-<script>
-  $(function() {
-      $("#dropdowns > div").hide();
-      $("#dropdowns h3").click(function() {
-        $("#dropdowns > div:visible").slideUp();
-        $(this).next().slideDown();
-       });
-   });
-</script>
-<style>
-
-  body { width:300px; marging: 0 auto; color:gray; font-family:Georgia, serif;}
-
-  p { padding-top:7px;}
-
-  h3 { 
-    margin-top:30px;
-    background-color:#dddddd;
-    padding:3px;
-    line-height:1.2em;
-}
-  h3 a { 
-    text-decoration:none;
-    color:gray;
-    font-weight:bold
-  }
-
-</style>
-
-
-</textarea>
-</article>
-
-<article class='slide slide-statement'>
-<h1><a href="http://docs.jquery.com/UI/Accordion">jQuery Accordian</a></h1>
-</article>
-
-<article class='slide slide-list'>
-<h2>Click Drop-Down</h2>
-<p>jQuery Accordian</p>
+<p><a href="http://docs.jquery.com/UI/Accordion">jQuery Accordian</a></p>
 	
 <textarea class='coder-editor coder-editor-full'>
 <!DOCTYPE html>
@@ -773,6 +542,17 @@ document.write("Let's write some HTML right here!");
 </html>
 
 </textarea>
+</article>
+
+
+
+<article class='slide slide-statement'>
+<h1><a href="http://fancybox.net/">jQuery LightBox</a></h1>
+</article>
+
+
+<article class='slide slide-statement'>
+<h1><a href="http://nivo.dev7studios.com/">Nivo Slider</a></h1>
 </article>
 
 <article class='slide slide-list'>
@@ -998,17 +778,6 @@ header h1 {
 </script>
 
 </article>
-
-<article class='slide slide-statement'>
-<h1><a href="http://fancybox.net/">jQuery LightBox</a></h1>
-</article>
-
-
-<article class='slide slide-statement'>
-<h1><a href="http://nivo.dev7studios.com/">Nivo Slider</a></h1>
-</article>
-
-
 
 <article class='slide slide-subhead'>
 	<h1>Hosting &amp; FTPing your website</h1>
